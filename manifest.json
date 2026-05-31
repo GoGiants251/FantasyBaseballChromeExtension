@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Fantasy Baseball Helper",
+  "version": "1.13.10",
+  "description": "A personal-use helper that highlights local MLB player recommendations on fantasy baseball pages.",
+  "permissions": ["sidePanel", "storage"],
+  "host_permissions": ["https://raw.githubusercontent.com/*"],
+  "action": {
+    "default_title": "Fantasy Baseball Helper"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.espn.com/fantasy/baseball/*",
+        "https://fantasy.espn.com/baseball/*",
+        "https://*.yahoo.com/fantasybaseball/*",
+        "https://*.cbssports.com/fantasy/baseball/*",
+        "https://*.fantrax.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "players.json",
+        "mlb-players.json",
+        "data/generated/rating-history.json",
+        "logo.png",
+        "image.png",
+        "savant-rankings.png"
+      ],
+      "matches": [
+        "https://*.espn.com/*",
+        "https://*.yahoo.com/*",
+        "https://*.cbssports.com/*",
+        "https://*.fantrax.com/*"
+      ]
+    }
+  ]
+}

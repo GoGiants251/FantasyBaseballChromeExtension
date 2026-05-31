@@ -1,0 +1,91 @@
+name: Refresh fantasy baseball data
+
+on:
+  schedule:
+    - cron: "0 12 */3 * *"
+  workflow_dispatch:
+    inputs:
+      refresh_date:
+        description: "Override refresh date, YYYY-MM-DD"
+        required: false
+      season:
+        description: "Override MLB season"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-fantasy-baseball-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/Los_Angeles
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Calculate dates
+        id: dates
+        shell: bash
+        run: |
+          REFRESH_DATE="${{ github.event.inputs.refresh_date }}"
+          if [ -z "$REFRESH_DATE" ]; then
+            REFRESH_DATE="$(TZ=America/Los_Angeles date +%F)"
+          fi
+
+          if ! [[ "$REFRESH_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid refresh_date: $REFRESH_DATE" >&2
+            exit 1
+          fi
+
+          SEASON="${{ github.event.inputs.season }}"
+          if [ -z "$SEASON" ]; then
+            SEASON="$(node -e 'console.log(require("./helper-config.json").season || new Date().getFullYear())')"
+          fi
+
+          if ! [[ "$SEASON" =~ ^[0-9]{4}$ ]]; then
+            echo "Invalid season: $SEASON" >&2
+            exit 1
+          fi
+
+          echo "refresh_date=$REFRESH_DATE" >> "$GITHUB_OUTPUT"
+          echo "season=$SEASON" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh player data
+        run: node scripts/update-players.js --date "${{ steps.dates.outputs.refresh_date }}"
+
+      - name: Backfill weekly rating history
+        run: node scripts/backfill-rating-history.js --season "${{ steps.dates.outputs.season }}" --through "${{ steps.dates.outputs.refresh_date }}"
+
+      - name: Validate generated JSON
+        run: |
+          node -e 'JSON.parse(require("fs").readFileSync("players.json","utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("mlb-players.json","utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("data/generated/player-values.json","utf8"))'
+          node -e 'JSON.parse(require("fs").readFileSync("data/generated/rating-history.json","utf8"))'
+
+      - name: Commit generated data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add players.json mlb-players.json data/generated/player-values.json data/generated/rating-history.json
+
+          if git diff --cached --quiet; then
+            echo "No generated data changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Refresh fantasy baseball data for ${{ steps.dates.outputs.refresh_date }}"
+          git push

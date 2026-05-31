@@ -1,0 +1,113 @@
+/* sidepanel.css
+   Styles the Chrome native side panel. This UI does not cover the fantasy page. */
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fbh-panel-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 14px;
+  border-bottom: 1px solid #d1d5db;
+  background: #ffffff;
+}
+
+.fbh-panel-header h1 {
+  margin: 0;
+  color: #0f5132;
+  font-size: 18px;
+}
+
+.fbh-panel-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.fbh-panel-content {
+  padding: 12px;
+}
+
+.fbh-panel-summary {
+  margin: 0 0 12px;
+  color: #374151;
+}
+
+.fbh-match-group {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #d1d5db;
+}
+
+.fbh-match-group h2 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.fbh-player-card {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fbh-player-card h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.fbh-meta,
+.fbh-score,
+.fbh-projection,
+.fbh-stats,
+.fbh-reason,
+.fbh-source {
+  margin: 5px 0;
+}
+
+.fbh-meta,
+.fbh-projection,
+.fbh-stats,
+.fbh-source {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.fbh-tag {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fbh-score {
+  font-weight: 700;
+}
+
+.fbh-untracked-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.fbh-empty {
+  margin: 0;
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #64748b;
+}

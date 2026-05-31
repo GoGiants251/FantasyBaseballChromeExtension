@@ -1,0 +1,94 @@
+{
+  "season": 2026,
+  "leagueSettings": {
+    "leagueType": "roto",
+    "categories": ["R", "HR", "RBI", "SB", "AVG", "QS", "W", "SV", "K", "ERA", "WHIP"],
+    "riskTolerance": "balanced"
+  },
+  "projectionSources": {
+    "hittersUrl": "https://razzball.com/steamer-hitter-projections",
+    "pitchersUrl": "https://razzball.com/steamer-pitcher-projections"
+  },
+  "aiRecommendations": {
+    "enabled": false,
+    "provider": "gemini",
+    "model": "gemini-2.5-flash-lite",
+    "maxPlayers": 25,
+    "minimumScore": 45,
+    "requestsPerMinute": 5
+  },
+  "players": [
+    {
+      "mlbId": 682998,
+      "positions": ["OF"],
+      "manualRecommendation": {
+        "tag": "Speed + Power",
+        "scoreAdjustment": 0,
+        "reason": "Offers strong stolen base upside with enough power to help across multiple categories."
+      }
+    },
+    {
+      "mlbId": 683002,
+      "positions": ["SS", "3B"],
+      "manualRecommendation": {
+        "tag": "Elite Upside",
+        "scoreAdjustment": 0,
+        "reason": "High-impact bat with strong run production potential in a deep lineup."
+      }
+    },
+    {
+      "mlbId": 657277,
+      "positions": ["SP"],
+      "manualRecommendation": {
+        "tag": "Ratio Stabilizer",
+        "scoreAdjustment": 0,
+        "reason": "Reliable starter profile with innings volume and strong ratio support."
+      }
+    },
+    {
+      "mlbId": 682829,
+      "positions": ["SS", "3B"],
+      "manualRecommendation": {
+        "tag": "Category Winner",
+        "scoreAdjustment": 0,
+        "reason": "Game-changing stolen base upside with power that can swing weekly matchups."
+      }
+    },
+    {
+      "mlbId": 669373,
+      "positions": ["SP"],
+      "manualRecommendation": {
+        "tag": "Ace Target",
+        "scoreAdjustment": 0,
+        "reason": "Misses bats at a high level and has the skills to anchor a fantasy rotation."
+      }
+    },
+    {
+      "mlbId": 646240,
+      "positions": ["1B", "3B", "DH"],
+      "manualRecommendation": {
+        "tag": "Power Bat",
+        "scoreAdjustment": 0,
+        "reason": "Strong power profile, but matchup and recent production should drive the final lineup call."
+      }
+    },
+    {
+      "mlbId": 677951,
+      "positions": ["SS"],
+      "manualRecommendation": {
+        "tag": "Five-Category Anchor",
+        "scoreAdjustment": 0,
+        "reason": "Elite across power, speed, runs, and RBI with everyday lineup security."
+      }
+    },
+    {
+      "mlbId": 663538,
+      "positions": ["2B", "SS"],
+      "manualRecommendation": {
+        "tag": "Average + Speed",
+        "scoreAdjustment": 0,
+        "reason": "Useful batting average and speed profile, but ceiling depends on lineup spot and matchup."
+      }
+    }
+  ]
+}
