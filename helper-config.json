@@ -6,8 +6,8 @@
     "riskTolerance": "balanced"
   },
   "projectionSources": {
-    "hittersUrl": "https://razzball.com/steamer-hitter-projections",
-    "pitchersUrl": "https://razzball.com/steamer-pitcher-projections"
+    "hittersUrl": "https://razzball.com/restofseason-hitterprojections",
+    "pitchersUrl": "https://razzball.com/restofseason-pitcherprojections"
   },
   "aiRecommendations": {
     "enabled": false,

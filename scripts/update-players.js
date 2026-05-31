@@ -257,9 +257,9 @@ function getUpdateDate() {
 async function fetchProjectionPool(config) {
   const sources = config.projectionSources || {};
   const hitterUrl =
-    sources.hittersUrl || "https://razzball.com/steamer-hitter-projections";
+    sources.hittersUrl || "https://razzball.com/restofseason-hitterprojections";
   const pitcherUrl =
-    sources.pitchersUrl || "https://razzball.com/steamer-pitcher-projections";
+    sources.pitchersUrl || "https://razzball.com/restofseason-pitcherprojections";
 
   const [hitters, pitchers] = await Promise.all([
     fetchRazzballProjectionTable(hitterUrl, "hitting"),
@@ -269,7 +269,7 @@ async function fetchProjectionPool(config) {
   return {
     hitters,
     pitchers,
-    source: "Razzball/Steamer projections",
+    source: "Razzball/Steamer rest-of-season projections",
     hitterUrl,
     pitcherUrl
   };
