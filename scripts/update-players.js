@@ -27,6 +27,9 @@ const HITTER_RECENT_TREND_GAME_COUNT = 7;
 const STARTER_RECENT_TREND_GAME_COUNT = 3;
 const RELIEVER_RECENT_TREND_GAME_COUNT = 5;
 const RECENT_GAMES_OUTPUT_COUNT = 15;
+const HITTER_PROJECTION_POOL_PA_PERCENTILE = 0.6;
+const HITTER_PROJECTION_POOL_MIN_PA = 75;
+const HITTER_PROJECTION_POOL_MAX_PA = 250;
 const HITTER_SEASON_FORM_FULL_TRUST_PA = 150;
 const STARTER_SEASON_FORM_FULL_TRUST_IP = 40;
 const RELIEVER_SEASON_FORM_FULL_TRUST_IP = 15;
@@ -653,7 +656,10 @@ function isCompatibleWithProjectionGroup(player, group) {
 }
 
 function scoreHitters(hitters) {
-  const eligible = hitters.filter((player) => player.projected.plateAppearances >= 250);
+  const projectionPoolMinimumPlateAppearances = getDynamicHitterProjectionPoolMinimumPa(hitters);
+  const eligible = hitters.filter((player) => {
+    return player.projected.plateAppearances >= projectionPoolMinimumPlateAppearances;
+  });
   const metrics = {
     runs: getMeanAndStd(eligible.map((player) => player.projected.runs)),
     homeRuns: getMeanAndStd(eligible.map((player) => player.projected.homeRuns)),
@@ -682,12 +688,37 @@ function scoreHitters(hitters) {
       ...player,
       fantasyValue: round(adjustedValue, 2),
       fantasyValueRaw: round(rawValue, 2),
-      positionAdjustment: round(positionAdjustment, 2)
+      positionAdjustment: round(positionAdjustment, 2),
+      projectionPoolMinimumPlateAppearances
     };
   });
 
-  const percentilePool = scored.filter((player) => player.projected.plateAppearances >= 250);
+  const percentilePool = scored.filter((player) => {
+    return player.projected.plateAppearances >= projectionPoolMinimumPlateAppearances;
+  });
   return addPercentileScores(scored, percentilePool);
+}
+
+function getDynamicHitterProjectionPoolMinimumPa(hitters) {
+  const projectedPlateAppearances = hitters
+    .map((player) => player.projected.plateAppearances)
+    .filter((plateAppearances) => Number.isFinite(plateAppearances) && plateAppearances > 0)
+    .sort((a, b) => a - b);
+
+  if (projectedPlateAppearances.length === 0) {
+    return HITTER_PROJECTION_POOL_MIN_PA;
+  }
+
+  const percentileIndex = Math.floor(
+    (projectedPlateAppearances.length - 1) * HITTER_PROJECTION_POOL_PA_PERCENTILE
+  );
+  const percentilePlateAppearances = projectedPlateAppearances[percentileIndex];
+
+  return clamp(
+    Math.round(percentilePlateAppearances),
+    HITTER_PROJECTION_POOL_MIN_PA,
+    HITTER_PROJECTION_POOL_MAX_PA
+  );
 }
 
 function getHitterPositionScarcityAdjustment(positions) {
@@ -843,7 +874,7 @@ function applyRatings(players) {
         "Rest-of-season projection weighted 60%; current form weighted 40%.",
         "Current form includes season form, recent games, and Savant skills."
       ],
-      modelVersion: "rest-of-season-blend-v1"
+      modelVersion: "rest-of-season-blend-v2"
     };
 
     return {
@@ -2433,6 +2464,8 @@ function buildPlayerRecord({
       fantasyValue: projectionValue.fantasyValue,
       fantasyValueRaw: projectionValue.fantasyValueRaw,
       positionAdjustment: projectionValue.positionAdjustment,
+      projectionPoolMinimumPlateAppearances:
+        projectionValue.projectionPoolMinimumPlateAppearances,
       percentileScore: projectionValue.score
     },
     recommendation: {

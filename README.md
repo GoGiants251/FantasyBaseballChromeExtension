@@ -36,7 +36,7 @@ node scripts/update-players.js --date 2026-05-03
 5. Refresh the fantasy baseball page.
 6. Click the extension icon to open the side panel.
 
-The updater fetches MLB identity/current season stats and recent game logs from `statsapi.mlb.com`, imports Razzball/Steamer rest-of-season hitter and pitcher projection tables, imports Baseball Savant custom leaderboard CSV metrics, builds an explainable rest-of-season rating, generates deterministic decision notes, and rewrites `players.json`. Projection scores are ranked against fantasy-relevant players; hitter scores include a modest position scarcity adjustment. Final scores are weighted 60% rest-of-season projection and 40% current form.
+The updater fetches MLB identity/current season stats and recent game logs from `statsapi.mlb.com`, imports Razzball/Steamer rest-of-season hitter and pitcher projection tables, imports Baseball Savant custom leaderboard CSV metrics, builds an explainable rest-of-season rating, generates deterministic decision notes, and rewrites `players.json`. Projection scores are ranked against fantasy-relevant players; hitter scores use a dynamic rest-of-season PA pool, based on the 60th percentile of projected hitter PA and clamped between 75 and 250 PA, plus a modest position scarcity adjustment. Final scores are weighted 60% rest-of-season projection and 40% current form.
 
 It also writes `mlb-players.json`, a local MLB name index that the extension uses to find visible untracked players on the fantasy page.
 
