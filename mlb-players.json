@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-05-31",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -382,6 +382,13 @@
       "active": true
     },
     {
+      "name": "Andrew Wantz",
+      "mlbId": 681806,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Andruw Monasterio",
       "mlbId": 655316,
       "team": "",
@@ -559,6 +566,13 @@
     {
       "name": "Bailey Ober",
       "mlbId": 641927,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Beau Brieske",
+      "mlbId": 689225,
       "team": "",
       "position": "P",
       "active": true
@@ -1210,6 +1224,13 @@
     {
       "name": "Calvin Faucher",
       "mlbId": 676534,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Cam Booser",
+      "mlbId": 592155,
       "team": "",
       "position": "P",
       "active": true
@@ -3028,6 +3049,13 @@
       "active": true
     },
     {
+      "name": "Hayden Juenger",
+      "mlbId": 696522,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Hayden Senger",
       "mlbId": 663584,
       "team": "",
@@ -3343,6 +3371,13 @@
       "active": true
     },
     {
+      "name": "Jacob Gonzalez",
+      "mlbId": 694378,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Jacob Latz",
       "mlbId": 656641,
       "team": "",
@@ -3541,6 +3576,13 @@
     {
       "name": "Janson Junk",
       "mlbId": 676083,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jared Jones",
+      "mlbId": 683003,
       "team": "",
       "position": "P",
       "active": true
@@ -3774,6 +3816,13 @@
       "mlbId": 805347,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Jimmy Crooks",
+      "mlbId": 699625,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -5093,6 +5142,13 @@
       "active": true
     },
     {
+      "name": "Lyon Richardson",
+      "mlbId": 680689,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "MacKenzie Gore",
       "mlbId": 669022,
       "team": "",
@@ -5657,6 +5713,13 @@
       "mlbId": 663993,
       "team": "",
       "position": "DH",
+      "active": true
+    },
+    {
+      "name": "Nelson Velázquez",
+      "mlbId": 676369,
+      "team": "",
+      "position": "OF",
       "active": true
     },
     {
@@ -6524,7 +6587,7 @@
       "name": "Ryan Ward",
       "mlbId": 669899,
       "team": "",
-      "position": "1B",
+      "position": "LF",
       "active": true
     },
     {
@@ -6952,6 +7015,20 @@
       "mlbId": 595345,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Steward Berroa",
+      "mlbId": 672642,
+      "team": "",
+      "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Stuart Fairchild",
+      "mlbId": 656413,
+      "team": "",
+      "position": "RF",
       "active": true
     },
     {
