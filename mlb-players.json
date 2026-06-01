@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-06-01",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -511,7 +511,7 @@
       "name": "Austin Martin",
       "mlbId": 668885,
       "team": "",
-      "position": "LF",
+      "position": "RF",
       "active": true
     },
     {
@@ -748,6 +748,13 @@
     {
       "name": "Brandon Eisert",
       "mlbId": 685126,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Brandon Leibrandt",
+      "mlbId": 605335,
       "team": "",
       "position": "P",
       "active": true
@@ -1057,7 +1064,7 @@
       "name": "Bryan Torres",
       "mlbId": 663494,
       "team": "",
-      "position": "OF",
+      "position": "LF",
       "active": true
     },
     {
@@ -1820,7 +1827,7 @@
       "name": "Colton Cowser",
       "mlbId": 681297,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -2198,7 +2205,7 @@
       "name": "Donovan Walton",
       "mlbId": 622268,
       "team": "",
-      "position": "2B",
+      "position": "3B",
       "active": true
     },
     {
@@ -2402,6 +2409,13 @@
       "mlbId": 665795,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Edwin Arroyo",
+      "mlbId": 695490,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -3500,7 +3514,7 @@
       "name": "Jake McCarthy",
       "mlbId": 664983,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -4008,6 +4022,13 @@
       "active": true
     },
     {
+      "name": "Jonah Cox",
+      "mlbId": 813841,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Jonah Heim",
       "mlbId": 641680,
       "team": "",
@@ -4360,6 +4381,13 @@
     {
       "name": "Josh Walker",
       "mlbId": 677020,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Josh White",
+      "mlbId": 687985,
       "team": "",
       "position": "P",
       "active": true
@@ -5446,7 +5474,7 @@
       "name": "Michael Conforto",
       "mlbId": 624424,
       "team": "",
-      "position": "RF",
+      "position": "DH",
       "active": true
     },
     {
@@ -5578,6 +5606,13 @@
     {
       "name": "Mike Burrows",
       "mlbId": 681347,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Mike Paredes",
+      "mlbId": 702474,
       "team": "",
       "position": "P",
       "active": true
@@ -7252,7 +7287,7 @@
       "name": "Tommy Troy",
       "mlbId": 694371,
       "team": "",
-      "position": "OF",
+      "position": "LF",
       "active": true
     },
     {
@@ -7693,7 +7728,7 @@
       "name": "Wade Meckler",
       "mlbId": 685133,
       "team": "",
-      "position": "OF",
+      "position": "LF",
       "active": true
     },
     {
