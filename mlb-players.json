@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-01",
+  "updatedAt": "2026-06-04",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -466,6 +466,13 @@
       "active": true
     },
     {
+      "name": "Anthony Seigler",
+      "mlbId": 678011,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Anthony Volpe",
       "mlbId": 683011,
       "team": "",
@@ -554,7 +561,7 @@
       "mlbId": 642851,
       "team": "",
       "position": "C",
-      "active": true
+      "active": false
     },
     {
       "name": "Bailey Falter",
@@ -573,6 +580,13 @@
     {
       "name": "Beau Brieske",
       "mlbId": 689225,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Beck Way",
+      "mlbId": 694360,
       "team": "",
       "position": "P",
       "active": true
@@ -1135,6 +1149,13 @@
       "mlbId": 696149,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Buddy Kennedy",
+      "mlbId": 671083,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
@@ -1709,6 +1730,13 @@
       "mlbId": 675989,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Cody Freeman",
+      "mlbId": 683227,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
@@ -2317,7 +2345,7 @@
       "name": "Dylan Crews",
       "mlbId": 686611,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -3651,6 +3679,13 @@
       "active": true
     },
     {
+      "name": "Jase Bowen",
+      "mlbId": 687749,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Jason Adam",
       "mlbId": 592094,
       "team": "",
@@ -4344,6 +4379,13 @@
       "active": true
     },
     {
+      "name": "Josh Hader",
+      "mlbId": 623352,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Josh Jung",
       "mlbId": 673962,
       "team": "",
@@ -4528,6 +4570,13 @@
     {
       "name": "Justin Wrobleski",
       "mlbId": 680736,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Kade Morris",
+      "mlbId": 695034,
       "team": "",
       "position": "P",
       "active": true
@@ -6356,7 +6405,7 @@
       "name": "Rikuu Nishida",
       "mlbId": 807747,
       "team": "",
-      "position": "OF",
+      "position": "RF",
       "active": true
     },
     {
@@ -6395,15 +6444,15 @@
       "active": true
     },
     {
-      "name": "Rob Zastryzny",
-      "mlbId": 642239,
+      "name": "Robbie Ray",
+      "mlbId": 592662,
       "team": "",
       "position": "P",
       "active": true
     },
     {
-      "name": "Robbie Ray",
-      "mlbId": 592662,
+      "name": "Robby Ahlstrom",
+      "mlbId": 695239,
       "team": "",
       "position": "P",
       "active": true
@@ -6749,6 +6798,13 @@
       "mlbId": 594580,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Samad Taylor",
+      "mlbId": 669392,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
@@ -7263,6 +7319,13 @@
       "active": true
     },
     {
+      "name": "TJ Shook",
+      "mlbId": 669298,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Tobias Myers",
       "mlbId": 668964,
       "team": "",
@@ -7620,6 +7683,13 @@
       "active": true
     },
     {
+      "name": "Tyler Zuber",
+      "mlbId": 676604,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Tyron Guerrero",
       "mlbId": 594027,
       "team": "",
@@ -7776,6 +7846,13 @@
     {
       "name": "Wilber Dotel",
       "mlbId": 696062,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Wilkin Ramos",
+      "mlbId": 678576,
       "team": "",
       "position": "P",
       "active": true
@@ -8070,6 +8147,13 @@
     {
       "name": "Zach Maxwell",
       "mlbId": 687209,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Zach McCambley",
+      "mlbId": 685112,
       "team": "",
       "position": "P",
       "active": true
