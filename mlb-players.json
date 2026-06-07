@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-04",
+  "updatedAt": "2026-06-07",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -253,6 +253,13 @@
       "mlbId": 681911,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Ali Sánchez",
+      "mlbId": 645305,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -561,7 +568,7 @@
       "mlbId": 642851,
       "team": "",
       "position": "C",
-      "active": false
+      "active": true
     },
     {
       "name": "Bailey Falter",
@@ -1390,6 +1397,13 @@
       "active": true
     },
     {
+      "name": "Carson Seymour",
+      "mlbId": 693313,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Carson Williams",
       "mlbId": 700246,
       "team": "",
@@ -1457,6 +1471,13 @@
       "mlbId": 663967,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Chad Dallas",
+      "mlbId": 689149,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -1831,6 +1852,13 @@
       "active": true
     },
     {
+      "name": "Collin Price",
+      "mlbId": 805672,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Colson Montgomery",
       "mlbId": 695657,
       "team": "",
@@ -1952,6 +1980,13 @@
     {
       "name": "Craig Kimbrel",
       "mlbId": 518886,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Craig Yoho",
+      "mlbId": 684974,
       "team": "",
       "position": "P",
       "active": true
@@ -2286,6 +2321,13 @@
       "active": true
     },
     {
+      "name": "Drew Rom",
+      "mlbId": 680723,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Drew Romo",
       "mlbId": 691011,
       "team": "",
@@ -2295,6 +2337,13 @@
     {
       "name": "Drew Sommers",
       "mlbId": 805427,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Drey Jameson",
+      "mlbId": 686753,
       "team": "",
       "position": "P",
       "active": true
@@ -3654,7 +3703,7 @@
       "name": "Jared Triolo",
       "mlbId": 669707,
       "team": "",
-      "position": "3B",
+      "position": "SS",
       "active": true
     },
     {
@@ -3912,6 +3961,13 @@
     {
       "name": "Joe Boyle",
       "mlbId": 671212,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Joe La Sorsa",
+      "mlbId": 686747,
       "team": "",
       "position": "P",
       "active": true
@@ -4407,6 +4463,13 @@
       "active": true
     },
     {
+      "name": "Josh Rojas",
+      "mlbId": 668942,
+      "team": "",
+      "position": "3B",
+      "active": true
+    },
+    {
       "name": "Josh Simpson",
       "mlbId": 681006,
       "team": "",
@@ -4577,6 +4640,13 @@
     {
       "name": "Kade Morris",
       "mlbId": 695034,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Kade Strowd",
+      "mlbId": 669704,
       "team": "",
       "position": "P",
       "active": true
@@ -4897,6 +4967,13 @@
       "active": true
     },
     {
+      "name": "LaMonte Wade Jr.",
+      "mlbId": 664774,
+      "team": "",
+      "position": "1B",
+      "active": true
+    },
+    {
       "name": "Lance McCullers Jr.",
       "mlbId": 621121,
       "team": "",
@@ -4915,6 +4992,13 @@
       "mlbId": 657041,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Lars Nootbaar",
+      "mlbId": 663457,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -5174,6 +5258,13 @@
       "mlbId": 682668,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "LuJames Groover",
+      "mlbId": 694410,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
@@ -6822,6 +6913,13 @@
       "active": true
     },
     {
+      "name": "Samy Natera Jr.",
+      "mlbId": 696519,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Sandy Alcantara",
       "mlbId": 645261,
       "team": "",
@@ -7333,6 +7431,13 @@
       "active": true
     },
     {
+      "name": "Tommy Kahnle",
+      "mlbId": 592454,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Tommy Nance",
       "mlbId": 667297,
       "team": "",
@@ -7742,7 +7847,7 @@
       "name": "Victor Mesa Jr.",
       "mlbId": 683748,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
