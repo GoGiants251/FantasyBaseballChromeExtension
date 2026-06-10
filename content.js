@@ -1375,10 +1375,10 @@ function createRatingTrendSection(player) {
   const meta = document.createElement("p");
   meta.className = "fbh-player-modal-notes";
   const currentDate = player.source?.updatedAt || player.decision?.generatedAt || "";
-  const todayDate = getTodayDateString();
+  const currentWeekDate = getCurrentRatingWeekDate(currentDate);
   const weeklyHistory = history.filter((entry) => entry.kind !== "current");
   const currentSuffix = currentDate
-    ? ` The ${formatTrendDate(todayDate)} point is the current card value from the latest refresh through ${formatTrendDate(currentDate)}.`
+    ? ` The ${formatTrendDate(currentWeekDate)} point is the current week value from the latest refresh through ${formatTrendDate(currentDate)}.`
     : "";
   meta.textContent =
     (weeklyHistory.length === 1
@@ -1394,11 +1394,11 @@ function createRatingTrendSection(player) {
 function normalizeRatingHistory(player) {
   const history = Array.isArray(player.ratingHistory) ? player.ratingHistory : [];
   const currentDate = player.source?.updatedAt || player.decision?.generatedAt || "";
-  const todayDate = getTodayDateString();
+  const currentWeekDate = getCurrentRatingWeekDate(currentDate);
   const currentEntry =
-    currentDate && todayDate && player.rating
+    currentDate && currentWeekDate && player.rating
       ? {
-          date: todayDate,
+          date: currentWeekDate,
           throughDate: currentDate,
           kind: "current",
           scores: {
@@ -1464,6 +1464,22 @@ function getTodayDateString() {
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
   return `${year}-${month}-${day}`;
+}
+
+function getCurrentRatingWeekDate(currentDate) {
+  return getPreviousOrSameMonday(currentDate || getTodayDateString());
+}
+
+function getPreviousOrSameMonday(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  const day = date.getUTCDay();
+  const daysSinceMonday = (day + 6) % 7;
+  date.setUTCDate(date.getUTCDate() - daysSinceMonday);
+  return date.toISOString().slice(0, 10);
 }
 
 function isMondayDate(dateString) {
