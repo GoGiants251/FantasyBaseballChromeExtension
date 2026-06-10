@@ -3,8 +3,8 @@
 // Optional: node scripts/backfill-rating-history.js --season 2026 --through 2026-05-14
 //
 // Builds estimated weekly Monday rating-history points from MLB game logs.
-// Backfilled points intentionally omit Savant Skills; Savant history is only
-// captured by normal refresh snapshots from scripts/update-players.js.
+// Backfilled points intentionally omit Projection and Savant Skills. Projection
+// and Savant history are only captured by normal refresh snapshots.
 
 const fs = require("fs/promises");
 const path = require("path");
@@ -192,7 +192,7 @@ function buildSnapshotEntries(players, logsByKey, snapshotDate, cutoffDate) {
         throughDate: cutoffDate,
         scores: {
           overall,
-          projection: Math.round(projectionScore),
+          projection: null,
           currentForm: currentFormScore,
           seasonStats: seasonScore,
           recentTrend: recentScore,

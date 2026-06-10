@@ -50,7 +50,7 @@ To backfill estimated weekly Monday trend points from MLB game logs:
 node scripts/backfill-rating-history.js --season 2026 --through 2026-05-14
 ```
 
-Backfilled weekly points use current projection scores plus reconstructed season and recent-game form through the prior Sunday. They intentionally leave Savant Skills empty; Savant trend points are only captured on normal data refreshes.
+Backfilled weekly points use the current projection internally to estimate overall score plus reconstructed season and recent-game form through the prior Sunday, but they intentionally leave Projection and Savant Skills empty in trend history. Projection and Savant trend points are only captured on normal data refreshes.
 
 ## Automated Data Refresh
 

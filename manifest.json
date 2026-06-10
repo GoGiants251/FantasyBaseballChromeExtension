@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Fantasy Baseball Helper",
-  "version": "1.16.0",
+  "version": "1.16.1",
   "description": "A personal-use helper that highlights local MLB player recommendations on fantasy baseball pages.",
   "permissions": ["sidePanel", "storage"],
   "host_permissions": [
