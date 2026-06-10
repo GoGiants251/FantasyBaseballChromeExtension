@@ -54,7 +54,7 @@ Backfilled weekly points use current projection scores plus reconstructed season
 
 ## Automated Data Refresh
 
-The repo includes a GitHub Actions workflow at `.github/workflows/refresh-data.yml` that refreshes generated data every 3 days at 12:00 UTC. The workflow calculates the refresh date in `America/Los_Angeles`, runs the deterministic updater, backfills Monday rating history through the same date, validates the generated JSON, and commits only:
+The repo includes a GitHub Actions workflow at `.github/workflows/refresh-data.yml` that refreshes generated data daily at 12:00 UTC. The workflow calculates the refresh date in `America/Los_Angeles`, runs the deterministic updater, backfills Monday rating history through the same date, validates the generated JSON, and commits only:
 
 - `players.json`
 - `mlb-players.json`
