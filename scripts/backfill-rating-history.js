@@ -3,8 +3,9 @@
 // Optional: node scripts/backfill-rating-history.js --season 2026 --through 2026-05-14
 //
 // Builds estimated weekly Monday rating-history points from MLB game logs.
-// Backfilled points intentionally omit Projection and Savant Skills. Projection
-// and Savant history are only captured by normal refresh snapshots.
+// Backfilled points use preseason projection baselines before the first real
+// projection snapshot. Later Projection and Savant Skills history are only
+// captured by normal refresh snapshots.
 
 const fs = require("fs/promises");
 const path = require("path");
@@ -24,13 +25,20 @@ const STARTER_SEASON_FORM_FULL_TRUST_IP = 40;
 const RELIEVER_SEASON_FORM_FULL_TRUST_IP = 15;
 const RATING_HISTORY_MAX_DAYS = 90;
 const BACKFILL_SOURCE = "weekly-backfill-estimated-no-savant";
+const PRESEASON_HITTER_PROJECTION_URL = "https://razzball.com/steamer-hitter-projections";
+const PRESEASON_PITCHER_PROJECTION_URL = "https://razzball.com/steamer-pitcher-projections";
 
 async function main() {
   const players = await readJson(PLAYERS_PATH);
   const season = Number(getCliOption("--season")) || getSeasonFromPlayers(players) || new Date().getFullYear();
   const throughDate = getCliOption("--through") || getThroughDateFromPlayers(players) || new Date().toISOString().slice(0, 10);
   const gameLogStartDate = `${season}-03-01`;
-  const logsByKey = await fetchSeasonGameLogs(players, season, gameLogStartDate, throughDate);
+  const existingHistory = await readOptionalRatingHistory();
+  const [logsByKey, preseasonProjectionScores] = await Promise.all([
+    fetchSeasonGameLogs(players, season, gameLogStartDate, throughDate),
+    fetchPreseasonProjectionScores(players)
+  ]);
+  const firstRealProjectionDateByPlayer = buildFirstRealProjectionDateLookup(existingHistory);
   const mondays = getMondaySnapshotDates(logsByKey, throughDate);
 
   if (mondays.length === 0) {
@@ -40,9 +48,16 @@ async function main() {
 
   const backfillEntries = mondays.flatMap((snapshotDate) => {
     const cutoffDate = getDateDaysBefore(snapshotDate, 1);
-    return buildSnapshotEntries(players, logsByKey, snapshotDate, cutoffDate);
+    return buildSnapshotEntries({
+      players,
+      logsByKey,
+      snapshotDate,
+      cutoffDate,
+      preseasonProjectionScores,
+      firstRealProjectionDateByPlayer
+    });
   });
-  const history = await mergeRatingHistory(backfillEntries, throughDate);
+  const history = mergeRatingHistory(existingHistory, backfillEntries, throughDate);
 
   await fs.mkdir(GENERATED_DIR, { recursive: true });
   await fs.writeFile(RATING_HISTORY_PATH, `${JSON.stringify(history, null, 2)}\n`);
@@ -124,7 +139,14 @@ function getMondaySnapshotDates(logsByKey, throughDate) {
   return dates;
 }
 
-function buildSnapshotEntries(players, logsByKey, snapshotDate, cutoffDate) {
+function buildSnapshotEntries({
+  players,
+  logsByKey,
+  snapshotDate,
+  cutoffDate,
+  preseasonProjectionScores,
+  firstRealProjectionDateByPlayer
+}) {
   const snapshotPlayers = players.map((player) => {
     const splits = logsByKey.get(getPlayerGameLogKey(player.mlbId, player.projection?.group)) || [];
     const throughSplits = splits.filter((split) => split.date <= cutoffDate);
@@ -156,7 +178,15 @@ function buildSnapshotEntries(players, logsByKey, snapshotDate, cutoffDate) {
   return snapshotPlayers
     .map((player) => {
       const key = getPlayerRatingKey(player);
+      const historyKey = getPlayerHistoryIdentityKey(player);
       const projectionScore = Number(player.projection?.percentileScore) || Number(player.recommendation?.score) || 50;
+      const preseasonProjectionScore = preseasonProjectionScores.get(key);
+      const firstRealProjectionDate = firstRealProjectionDateByPlayer.get(historyKey);
+      const displayedProjectionScore =
+        Number.isFinite(preseasonProjectionScore) &&
+        (!firstRealProjectionDate || snapshotDate < firstRealProjectionDate)
+          ? Math.round(preseasonProjectionScore)
+          : null;
       const seasonScore = regressComponentScore({
         componentScore: componentScores.seasonStats.get(key),
         projectionScore,
@@ -192,7 +222,7 @@ function buildSnapshotEntries(players, logsByKey, snapshotDate, cutoffDate) {
         throughDate: cutoffDate,
         scores: {
           overall,
-          projection: null,
+          projection: displayedProjectionScore,
           currentForm: currentFormScore,
           seasonStats: seasonScore,
           recentTrend: recentScore,
@@ -360,11 +390,225 @@ function buildRecentGamesFromSplits(splits, group) {
         ops: getGameOps(stat),
         strikeOuts: toNumber(stat.strikeOuts)
       };
-    });
+	    });
 }
 
-async function mergeRatingHistory(backfillEntries, updatedAt) {
-  const existingHistory = await readOptionalRatingHistory();
+async function fetchPreseasonProjectionScores(players) {
+  try {
+    const [hitters, pitchers] = await Promise.all([
+      fetchRazzballProjectionTable(PRESEASON_HITTER_PROJECTION_URL, "hitting"),
+      fetchRazzballProjectionTable(PRESEASON_PITCHER_PROJECTION_URL, "pitching")
+    ]);
+    const scoredProjections = [...scorePreseasonHitters(hitters), ...scorePreseasonPitchers(pitchers)];
+    const playersBySourceId = new Map();
+    const playersByNameAndGroup = new Map();
+    const scores = new Map();
+
+    players.forEach((player) => {
+      const group = player.projection?.group || player.stats?.group || "";
+      const sourceId = Number(player.mlbId);
+      if (Number.isInteger(sourceId)) {
+        playersBySourceId.set(`${sourceId}:${group}`, player);
+      }
+      playersByNameAndGroup.set(`${normalizeNameKey(player.name)}:${group}`, player);
+    });
+
+    scoredProjections.forEach((projection) => {
+      const group = projection.group;
+      const sourceId = Number(projection.sourceId);
+      const player =
+        playersBySourceId.get(`${sourceId}:${group}`) ||
+        playersByNameAndGroup.get(`${normalizeNameKey(projection.name)}:${group}`);
+
+      if (player) {
+        scores.set(getPlayerRatingKey(player), projection.score);
+      }
+    });
+
+    return scores;
+  } catch (error) {
+    console.warn("Could not load preseason projection baselines:", error);
+    return new Map();
+  }
+}
+
+async function fetchRazzballProjectionTable(url, group) {
+  const html = await fetchText(url);
+  const tableMatch = html.match(
+    /<table[^>]+id=["']neorazzstatstable["'][\s\S]*?<\/table>/i
+  );
+
+  if (!tableMatch) {
+    throw new Error(`Could not find projection table at ${url}`);
+  }
+
+  const rows = parseHtmlTable(tableMatch[0]);
+  const headers = rows[0] || [];
+  return rows
+    .slice(1)
+    .map((row) => rowToObject(headers, row))
+    .filter((row) => row.Name)
+    .map((row) => normalizeProjection(row, group));
+}
+
+function parseHtmlTable(tableHtml) {
+  const rowMatches = tableHtml.match(/<tr[\s\S]*?<\/tr>/gi) || [];
+  return rowMatches.map((rowHtml) => {
+    const cellMatches = rowHtml.match(/<t[dh][^>]*>[\s\S]*?<\/t[dh]>/gi) || [];
+    return cellMatches.map((cellHtml) => {
+      return decodeHtml(stripTags(cellHtml)).replace(/\s+/g, " ").trim();
+    });
+  });
+}
+
+function rowToObject(headers, row) {
+  return headers.reduce((object, header, index) => {
+    object[header] = row[index] || "";
+    return object;
+  }, {});
+}
+
+function normalizeProjection(row, group) {
+  if (group === "pitching") {
+    return {
+      group,
+      name: row.Name,
+      sourceId: row.RazzID,
+      projected: {
+        qualityStarts: toNumber(row.QS),
+        inningsPitched: toNumber(row.IP),
+        wins: toNumber(row.W),
+        saves: toNumber(row.SV),
+        strikeOuts: toNumber(row.K),
+        era: toNumber(row.ERA),
+        whip: toNumber(row.WHIP)
+      }
+    };
+  }
+
+  return {
+    group,
+    name: row.Name,
+    sourceId: row.RazzID,
+    positions: parsePositions(row.ESPN || row.YAHOO),
+    projected: {
+      plateAppearances: toNumber(row.PA),
+      atBats: toNumber(row.AB),
+      runs: toNumber(row.R),
+      homeRuns: toNumber(row.HR),
+      rbi: toNumber(row.RBI),
+      stolenBases: toNumber(row.SB),
+      avg: toNumber(row.AVG)
+    }
+  };
+}
+
+function scorePreseasonHitters(hitters) {
+  const eligible = hitters.filter((player) => player.projected.plateAppearances >= 250);
+  const metrics = {
+    runs: getMeanAndStd(eligible.map((player) => player.projected.runs)),
+    homeRuns: getMeanAndStd(eligible.map((player) => player.projected.homeRuns)),
+    rbi: getMeanAndStd(eligible.map((player) => player.projected.rbi)),
+    stolenBases: getMeanAndStd(eligible.map((player) => player.projected.stolenBases)),
+    avgImpact: getMeanAndStd(
+      eligible.map((player) => {
+        return (player.projected.avg - 0.245) * Math.sqrt(player.projected.atBats || 1);
+      })
+    )
+  };
+  const scored = hitters.map((player) => {
+    const projected = player.projected;
+    const avgImpact = (projected.avg - 0.245) * Math.sqrt(projected.atBats || 1);
+    const rawValue =
+      z(projected.runs, metrics.runs) +
+      z(projected.homeRuns, metrics.homeRuns) +
+      z(projected.rbi, metrics.rbi) +
+      z(projected.stolenBases, metrics.stolenBases) +
+      z(avgImpact, metrics.avgImpact);
+    return {
+      ...player,
+      fantasyValue: round(rawValue + getHitterPositionScarcityAdjustment(player.positions), 2)
+    };
+  });
+  return addPercentileScores(scored, scored.filter((player) => player.projected.plateAppearances >= 250));
+}
+
+function scorePreseasonPitchers(pitchers) {
+  const eligible = pitchers.filter((player) => player.projected.inningsPitched >= 40);
+  const metrics = {
+    qualityStarts: getMeanAndStd(eligible.map((player) => player.projected.qualityStarts)),
+    wins: getMeanAndStd(eligible.map((player) => player.projected.wins)),
+    saves: getMeanAndStd(eligible.map((player) => player.projected.saves)),
+    strikeOuts: getMeanAndStd(eligible.map((player) => player.projected.strikeOuts)),
+    eraImpact: getMeanAndStd(
+      eligible.map((player) => {
+        return (3.9 - player.projected.era) * Math.sqrt(player.projected.inningsPitched || 1);
+      })
+    ),
+    whipImpact: getMeanAndStd(
+      eligible.map((player) => {
+        return (1.28 - player.projected.whip) * Math.sqrt(player.projected.inningsPitched || 1);
+      })
+    )
+  };
+  const scored = pitchers.map((player) => {
+    const projected = player.projected;
+    const eraImpact = (3.9 - projected.era) * Math.sqrt(projected.inningsPitched || 1);
+    const whipImpact = (1.28 - projected.whip) * Math.sqrt(projected.inningsPitched || 1);
+    return {
+      ...player,
+      fantasyValue: round(
+        z(projected.qualityStarts, metrics.qualityStarts) +
+          z(projected.wins, metrics.wins) +
+          z(projected.saves, metrics.saves) +
+          z(projected.strikeOuts, metrics.strikeOuts) +
+          z(eraImpact, metrics.eraImpact) +
+          z(whipImpact, metrics.whipImpact),
+        2
+      )
+    };
+  });
+  return addPercentileScores(scored, scored.filter((player) => player.projected.inningsPitched >= 40));
+}
+
+function addPercentileScores(players, percentilePool = players) {
+  const sortedValues = percentilePool
+    .map((player) => player.fantasyValue)
+    .filter((value) => Number.isFinite(value))
+    .sort((a, b) => a - b);
+
+  return players.map((player) => {
+    const lowerCount = sortedValues.filter((value) => value <= player.fantasyValue).length;
+    const percentile =
+      sortedValues.length <= 1 ? 1 : (lowerCount - 1) / Math.max(sortedValues.length - 1, 1);
+    return {
+      ...player,
+      score: clamp(Math.round(percentile * 99) + 1, 1, 100)
+    };
+  });
+}
+
+function buildFirstRealProjectionDateLookup(history) {
+  const lookup = new Map();
+  (history.entries || []).forEach((entry) => {
+    const projection = toNullableNumber(entry.scores?.projection);
+    if (
+      !entry?.date ||
+      entry.source === BACKFILL_SOURCE ||
+      !Number.isFinite(projection)
+    ) {
+      return;
+    }
+    const key = getPlayerHistoryIdentityKey(entry);
+    const previousDate = lookup.get(key);
+    if (!previousDate || entry.date < previousDate) {
+      lookup.set(key, entry.date);
+    }
+  });
+  return lookup;
+}
+
+function mergeRatingHistory(existingHistory, backfillEntries, updatedAt) {
   const backfillDates = new Set(backfillEntries.map((entry) => entry.date));
   const realSnapshotDates = new Set(
     (existingHistory.entries || [])
@@ -598,6 +842,10 @@ function getPlayerRatingKey(player) {
   return `${player.mlbId || player.name}:${player.projection?.group || player.stats?.group || "unknown"}`;
 }
 
+function getPlayerHistoryIdentityKey(player) {
+  return String(player?.mlbId || normalizeNameKey(player?.name));
+}
+
 function getPlayerGameLogKey(mlbId, group) {
   return `${mlbId || "unknown"}:${group || "unknown"}`;
 }
@@ -635,6 +883,39 @@ async function fetchJson(url) {
   return response.json();
 }
 
+async function fetchText(url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Request failed ${response.status}: ${url}`);
+  }
+
+  return response.text();
+}
+
+function getMeanAndStd(values) {
+  const filtered = values.filter((value) => Number.isFinite(value));
+  const mean =
+    filtered.reduce((total, value) => total + value, 0) / Math.max(filtered.length, 1);
+  const variance =
+    filtered.reduce((total, value) => total + (value - mean) ** 2, 0) /
+    Math.max(filtered.length, 1);
+
+  return {
+    mean,
+    std: Math.sqrt(variance) || 1
+  };
+}
+
+function z(value, metric) {
+  return (value - metric.mean) / metric.std;
+}
+
+function round(value, digits) {
+  const factor = 10 ** digits;
+  return Math.round(value * factor) / factor;
+}
+
 function toNumber(value) {
   const cleaned = String(value || "").replace(/[%,$]/g, "");
   const number = Number(cleaned);
@@ -653,6 +934,53 @@ function chunkArray(values, size) {
     chunks.push(values.slice(index, index + size));
   }
   return chunks;
+}
+
+function getHitterPositionScarcityAdjustment(positions) {
+  const adjustments = {
+    C: 0.75,
+    "2B": 0.35,
+    SS: 0.25,
+    "3B": 0.1,
+    "1B": 0,
+    OF: 0,
+    DH: 0,
+    UTIL: 0
+  };
+  const eligiblePositions = (positions || []).map((position) => String(position).toUpperCase());
+  return eligiblePositions.reduce((best, position) => {
+    return Math.max(best, adjustments[position] ?? 0);
+  }, 0);
+}
+
+function parsePositions(value) {
+  return String(value || "")
+    .split("/")
+    .map((position) => position.trim())
+    .filter(Boolean);
+}
+
+function normalizeNameKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function stripTags(html) {
+  return String(html || "").replace(/<[^>]*>/g, "");
+}
+
+function decodeHtml(value) {
+  return String(value || "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#039;/g, "'")
+    .replace(/&quot;/g, '"');
 }
 
 function getNextMonday(dateString) {
