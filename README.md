@@ -65,13 +65,14 @@ The scheduled workflow intentionally does not update `manifest.json`. Data-only 
 
 You can run the workflow manually from GitHub Actions with an optional `refresh_date` and `season` override. Use `YYYY-MM-DD` for the date.
 
-The extension tries to load JSON from public GitHub raw URLs first, then falls back to the bundled JSON files if the remote request fails, times out, returns an unexpected shape, or is older than the bundled data. The current remote base URL is configured in `content.js`:
+The extension resolves the latest `main` commit through the GitHub API, loads JSON from public GitHub raw URLs pinned to that commit SHA, then falls back to the bundled JSON files if the remote request fails, times out, returns an unexpected shape, or is older than the bundled data. The current remote repository URLs are configured in `content.js`:
 
 ```js
 https://raw.githubusercontent.com/GoGiants251/FantasyBaseballChromeExtension/main
+https://api.github.com/repos/GoGiants251/FantasyBaseballChromeExtension/commits/main
 ```
 
-If your GitHub repo owner or repo name differs, update `REMOTE_DATA_BASE_URL` in `content.js`, then bump `manifest.json` for that behavior/configuration change.
+If your GitHub repo owner or repo name differs, update the remote data constants in `content.js`, then bump `manifest.json` for that behavior/configuration change.
 
 Before relying on automated remote data:
 

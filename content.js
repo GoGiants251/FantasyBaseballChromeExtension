@@ -9,7 +9,12 @@ const RECENT_PERFORMANCE_EXPANDED_GAMES = 15;
 const PLAYER_NOTES_STORAGE_KEY = "fbhPlayerNotes";
 const REMOTE_DATA_BASE_URL =
   "https://raw.githubusercontent.com/GoGiants251/FantasyBaseballChromeExtension/main";
+const REMOTE_DATA_COMMIT_API_URL =
+  "https://api.github.com/repos/GoGiants251/FantasyBaseballChromeExtension/commits/main";
+const REMOTE_DATA_RAW_BASE_URL =
+  "https://raw.githubusercontent.com/GoGiants251/FantasyBaseballChromeExtension";
 const DATA_FETCH_TIMEOUT_MS = 6000;
+let resolvedRemoteDataBaseUrlPromise = null;
 const RATING_TREND_SERIES = [
   { key: "overall", label: "Overall", color: "#047857", defaultVisible: true },
   { key: "projection", label: "Projection", color: "#2563eb" },
@@ -161,7 +166,8 @@ async function loadRatingHistory() {
 
 async function loadJsonWithFallback(path, validator) {
   try {
-    const remoteUrl = `${REMOTE_DATA_BASE_URL}/${path}`;
+    const remoteBaseUrl = await getRemoteDataBaseUrl();
+    const remoteUrl = `${remoteBaseUrl}/${path}`;
     const data = await fetchJsonWithTimeout(remoteUrl, DATA_FETCH_TIMEOUT_MS);
     validateLoadedJson(path, data, validator);
     const bundledResult = await loadBundledJsonForStaleCheck(path, validator);
@@ -183,6 +189,36 @@ async function loadJsonWithFallback(path, validator) {
   }
 
   return loadBundledJsonResult(path, validator);
+}
+
+async function getRemoteDataBaseUrl() {
+  if (!resolvedRemoteDataBaseUrlPromise) {
+    resolvedRemoteDataBaseUrlPromise = resolveRemoteDataBaseUrl();
+  }
+
+  return resolvedRemoteDataBaseUrlPromise;
+}
+
+async function resolveRemoteDataBaseUrl() {
+  try {
+    const commit = await fetchJsonWithTimeout(
+      REMOTE_DATA_COMMIT_API_URL,
+      DATA_FETCH_TIMEOUT_MS
+    );
+    const sha = typeof commit?.sha === "string" ? commit.sha.trim() : "";
+
+    if (/^[0-9a-f]{40}$/i.test(sha)) {
+      return `${REMOTE_DATA_RAW_BASE_URL}/${sha}`;
+    }
+
+    throw new Error("GitHub commit API response did not include a valid SHA.");
+  } catch (error) {
+    console.warn(
+      "Fantasy Baseball Helper could not resolve latest GitHub commit; using branch raw URL:",
+      error
+    );
+    return REMOTE_DATA_BASE_URL;
+  }
 }
 
 async function loadBundledJsonForStaleCheck(path, validator) {
@@ -213,7 +249,7 @@ async function fetchJsonWithTimeout(url, timeoutMs) {
 
   try {
     const response = await fetch(url, {
-      cache: "default",
+      cache: "no-store",
       signal: controller.signal
     });
 

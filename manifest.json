@@ -1,10 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Fantasy Baseball Helper",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "A personal-use helper that highlights local MLB player recommendations on fantasy baseball pages.",
   "permissions": ["sidePanel", "storage"],
-  "host_permissions": ["https://raw.githubusercontent.com/*"],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/*",
+    "https://api.github.com/*"
+  ],
   "action": {
     "default_title": "Fantasy Baseball Helper"
   },
