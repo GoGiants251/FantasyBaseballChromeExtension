@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-07",
+  "updatedAt": "2026-06-09",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -266,7 +266,7 @@
       "name": "Alika Williams",
       "mlbId": 675961,
       "team": "",
-      "position": "2B",
+      "position": "SS",
       "active": true
     },
     {
@@ -722,6 +722,13 @@
       "mlbId": 695418,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Braden Montgomery",
+      "mlbId": 695731,
+      "team": "",
+      "position": "OF",
       "active": true
     },
     {
@@ -1782,6 +1789,13 @@
       "active": true
     },
     {
+      "name": "Cole Carrigg",
+      "mlbId": 694249,
+      "team": "",
+      "position": "OF",
+      "active": true
+    },
+    {
       "name": "Cole Henry",
       "mlbId": 669371,
       "team": "",
@@ -2160,6 +2174,13 @@
       "active": true
     },
     {
+      "name": "Davis Wendzel",
+      "mlbId": 673995,
+      "team": "",
+      "position": "3B",
+      "active": true
+    },
+    {
       "name": "Dax Fulton",
       "mlbId": 690978,
       "team": "",
@@ -2192,6 +2213,13 @@
       "mlbId": 672016,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Denzer Guzman",
+      "mlbId": 694203,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -3465,7 +3493,7 @@
       "name": "Jacob Gonzalez",
       "mlbId": 694378,
       "team": "",
-      "position": "SS",
+      "position": "1B",
       "active": true
     },
     {
@@ -3805,6 +3833,13 @@
       "active": true
     },
     {
+      "name": "Jeff Criswell",
+      "mlbId": 676105,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jeff Hoffman",
       "mlbId": 656546,
       "team": "",
@@ -3987,6 +4022,13 @@
       "active": true
     },
     {
+      "name": "Joe Rock",
+      "mlbId": 697812,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Joe Ross",
       "mlbId": 605452,
       "team": "",
@@ -4031,6 +4073,13 @@
     {
       "name": "Joey Cantillo",
       "mlbId": 676282,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Joey Estes",
+      "mlbId": 683155,
       "team": "",
       "position": "P",
       "active": true
@@ -4753,7 +4802,7 @@
       "name": "Kevin Alcántara",
       "mlbId": 682634,
       "team": "",
-      "position": "RF",
+      "position": "DH",
       "active": true
     },
     {
@@ -5853,6 +5902,13 @@
       "mlbId": 683083,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Nate Eaton",
+      "mlbId": 681987,
+      "team": "",
+      "position": "OF",
       "active": true
     },
     {
@@ -7571,6 +7627,13 @@
       "active": true
     },
     {
+      "name": "Trey Mancini",
+      "mlbId": 641820,
+      "team": "",
+      "position": "1B",
+      "active": true
+    },
+    {
       "name": "Trey Yesavage",
       "mlbId": 702056,
       "team": "",
@@ -8002,6 +8065,13 @@
       "mlbId": 676684,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Will Wagner",
+      "mlbId": 695238,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
