@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-09",
+  "updatedAt": "2026-06-10",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3660,6 +3660,13 @@
     {
       "name": "Jalen Beeks",
       "mlbId": 656222,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "James Karinchak",
+      "mlbId": 675916,
       "team": "",
       "position": "P",
       "active": true
