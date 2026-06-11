@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-10",
+  "updatedAt": "2026-06-11",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -4715,6 +4715,13 @@
       "active": true
     },
     {
+      "name": "Kameron Misner",
+      "mlbId": 670224,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Kazuma Okamoto",
       "mlbId": 672960,
       "team": "",
@@ -5828,6 +5835,13 @@
       "active": true
     },
     {
+      "name": "Miles Mastrobuoni",
+      "mlbId": 670156,
+      "team": "",
+      "position": "3B",
+      "active": true
+    },
+    {
       "name": "Miles Mikolas",
       "mlbId": 571945,
       "team": "",
@@ -6430,6 +6444,13 @@
       "active": true
     },
     {
+      "name": "Rafael Flores Jr.",
+      "mlbId": 804668,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Rafael Marchán",
       "mlbId": 665561,
       "team": "",
@@ -6502,6 +6523,13 @@
     {
       "name": "Reid Detmers",
       "mlbId": 672282,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Reiver Sanmartin",
+      "mlbId": 665665,
       "team": "",
       "position": "P",
       "active": true
@@ -6693,6 +6721,13 @@
       "mlbId": 677595,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Rowdy Tellez",
+      "mlbId": 642133,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
