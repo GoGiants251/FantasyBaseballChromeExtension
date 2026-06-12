@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-11",
+  "updatedAt": "2026-06-12",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1695,6 +1695,13 @@
       "mlbId": 666624,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Chuckie Robinson",
+      "mlbId": 642020,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -5737,6 +5744,13 @@
       "active": true
     },
     {
+      "name": "Michael Rucker",
+      "mlbId": 621074,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Michael Soroka",
       "mlbId": 647336,
       "team": "",
@@ -6328,7 +6342,7 @@
       "name": "Pavin Smith",
       "mlbId": 656976,
       "team": "",
-      "position": "1B",
+      "position": "DH",
       "active": true
     },
     {
