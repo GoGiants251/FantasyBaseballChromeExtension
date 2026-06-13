@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-12",
+  "updatedAt": "2026-06-13",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -494,6 +494,13 @@
       "active": true
     },
     {
+      "name": "Antwone Kelly",
+      "mlbId": 699008,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Aramis Garcia",
       "mlbId": 605244,
       "team": "",
@@ -687,6 +694,13 @@
       "mlbId": 677942,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Blaze Jordan",
+      "mlbId": 691458,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
@@ -2055,6 +2069,13 @@
       "active": true
     },
     {
+      "name": "Daniel Espino",
+      "mlbId": 682982,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Daniel Johnson",
       "mlbId": 669288,
       "team": "",
@@ -2874,6 +2895,13 @@
       "active": true
     },
     {
+      "name": "Gabriel Rincones Jr.",
+      "mlbId": 687282,
+      "team": "",
+      "position": "RF",
+      "active": true
+    },
+    {
       "name": "Gage Jump",
       "mlbId": 695611,
       "team": "",
@@ -3520,6 +3548,13 @@
     {
       "name": "Jacob Misiorowski",
       "mlbId": 694819,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jacob Waguespack",
+      "mlbId": 621097,
       "team": "",
       "position": "P",
       "active": true
@@ -6521,6 +6556,13 @@
       "active": true
     },
     {
+      "name": "Raynel Delgado",
+      "mlbId": 669384,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Rece Hinds",
       "mlbId": 677956,
       "team": "",
@@ -7007,7 +7049,7 @@
       "name": "Samad Taylor",
       "mlbId": 669392,
       "team": "",
-      "position": "2B",
+      "position": "LF",
       "active": true
     },
     {
@@ -7090,6 +7132,13 @@
     {
       "name": "Sean Newcomb",
       "mlbId": 656794,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Sean Sullivan",
+      "mlbId": 807743,
       "team": "",
       "position": "P",
       "active": true
