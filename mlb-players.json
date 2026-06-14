@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-13",
+  "updatedAt": "2026-06-14",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2554,6 +2554,13 @@
     {
       "name": "Edwin Díaz",
       "mlbId": 621242,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Eiberson Castellano",
+      "mlbId": 682769,
       "team": "",
       "position": "P",
       "active": true
@@ -6133,6 +6140,13 @@
       "mlbId": 686765,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Nick Solak",
+      "mlbId": 669256,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
