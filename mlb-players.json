@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-14",
+  "updatedAt": "2026-06-15",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -659,6 +659,13 @@
       "mlbId": 694362,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Blake Hunt",
+      "mlbId": 675448,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -4197,6 +4204,13 @@
       "active": true
     },
     {
+      "name": "John Rave",
+      "mlbId": 670231,
+      "team": "",
+      "position": "RF",
+      "active": true
+    },
+    {
       "name": "John Schreiber",
       "mlbId": 670167,
       "team": "",
@@ -5069,6 +5083,13 @@
       "mlbId": 663656,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Kyler Fedko",
+      "mlbId": 693459,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
