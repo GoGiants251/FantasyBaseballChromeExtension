@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-15",
+  "updatedAt": "2026-06-16",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -749,7 +749,7 @@
       "name": "Braden Montgomery",
       "mlbId": 695731,
       "team": "",
-      "position": "OF",
+      "position": "RF",
       "active": true
     },
     {
@@ -1009,6 +1009,13 @@
       "mlbId": 695391,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Brett Kerry",
+      "mlbId": 695049,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -1820,7 +1827,7 @@
       "name": "Cole Carrigg",
       "mlbId": 694249,
       "team": "",
-      "position": "OF",
+      "position": "CF",
       "active": true
     },
     {
@@ -2254,7 +2261,7 @@
       "name": "Denzer Guzman",
       "mlbId": 694203,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -2555,7 +2562,7 @@
       "name": "Edwin Arroyo",
       "mlbId": 695490,
       "team": "",
-      "position": "SS",
+      "position": "2B",
       "active": true
     },
     {
@@ -3822,7 +3829,7 @@
       "name": "Jase Bowen",
       "mlbId": 687749,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -3843,7 +3850,7 @@
       "name": "Jasson Domínguez",
       "mlbId": 691176,
       "team": "",
-      "position": "LF",
+      "position": "DH",
       "active": true
     },
     {
