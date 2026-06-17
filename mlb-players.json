@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-16",
+  "updatedAt": "2026-06-17",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2006,6 +2006,13 @@
       "active": true
     },
     {
+      "name": "Cooper Pratt",
+      "mlbId": 806198,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Corbin Carroll",
       "mlbId": 682998,
       "team": "",
@@ -2059,6 +2066,13 @@
       "mlbId": 678554,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Curtis Washington Jr.",
+      "mlbId": 690944,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
@@ -5702,6 +5716,13 @@
       "active": true
     },
     {
+      "name": "Max Lazar",
+      "mlbId": 676661,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Max Meyer",
       "mlbId": 676974,
       "team": "",
@@ -7634,6 +7655,13 @@
       "active": true
     },
     {
+      "name": "Tommy Edman",
+      "mlbId": 669242,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Tommy Kahnle",
       "mlbId": 592454,
       "team": "",
@@ -8218,7 +8246,7 @@
       "name": "Will Wagner",
       "mlbId": 695238,
       "team": "",
-      "position": "3B",
+      "position": "DH",
       "active": true
     },
     {
