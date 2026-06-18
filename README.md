@@ -42,7 +42,7 @@ It also writes `mlb-players.json`, a local MLB name index that the extension use
 
 It also writes `data/generated/player-values.json` as a backup copy of the generated projection values.
 
-It also appends the latest overall rating and five component scores to `data/generated/rating-history.json`. Player cards use that history to show selectable trend lines for Overall, Projection, Current Form, Season Stats, Recent Trend, and Savant Skills.
+It also writes the latest overall rating and five component scores to `data/generated/rating-history.json` under the current week’s Monday date. Daily refreshes update that same Monday point until the next week starts, so the latest weekly point stays current and then locks after Sunday. Player cards use that history to show selectable trend lines for Overall, Projection, Current Form, Season Stats, Recent Trend, and Savant Skills.
 
 To backfill estimated weekly Monday trend points from MLB game logs:
 

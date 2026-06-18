@@ -154,15 +154,16 @@ async function updateRatingHistory(players, updatedAt) {
   const previousEntries = Array.isArray(previousHistory.entries)
     ? previousHistory.entries.filter((entry) => isMondayDate(entry.date))
     : [];
-  const nextEntriesForDate = isMondayDate(updatedAt)
+  const snapshotDate = getPreviousOrSameMonday(updatedAt);
+  const nextEntriesForDate = snapshotDate
     ? players
-        .map((player) => buildRatingHistoryEntry(player, updatedAt))
+        .map((player) => buildRatingHistoryEntry(player, snapshotDate, updatedAt))
         .filter(Boolean)
     : [];
   const entriesByDate = new Map();
 
   previousEntries.forEach((entry) => {
-    if (!entry?.date || entry.date === updatedAt) {
+    if (!entry?.date || entry.date === snapshotDate) {
       return;
     }
 
@@ -173,7 +174,7 @@ async function updateRatingHistory(players, updatedAt) {
   });
 
   if (nextEntriesForDate.length) {
-    entriesByDate.set(updatedAt, nextEntriesForDate);
+    entriesByDate.set(snapshotDate, nextEntriesForDate);
   }
 
   const keptDates = Array.from(entriesByDate.keys())
@@ -198,6 +199,18 @@ function isMondayDate(dateString) {
   return !Number.isNaN(date.getTime()) && date.getUTCDay() === 1;
 }
 
+function getPreviousOrSameMonday(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return "";
+  }
+
+  const day = date.getUTCDay();
+  const daysSinceMonday = (day + 6) % 7;
+  date.setUTCDate(date.getUTCDate() - daysSinceMonday);
+  return date.toISOString().slice(0, 10);
+}
+
 async function readOptionalRatingHistory() {
   try {
     return await readJson(RATING_HISTORY_PATH);
@@ -209,7 +222,7 @@ async function readOptionalRatingHistory() {
   }
 }
 
-function buildRatingHistoryEntry(player, date) {
+function buildRatingHistoryEntry(player, date, throughDate) {
   const rating = player.rating || {};
   const components = rating.components || {};
   const overall = toNumber(rating.score || player.recommendation?.score);
@@ -220,6 +233,8 @@ function buildRatingHistoryEntry(player, date) {
 
   return {
     date,
+    throughDate,
+    kind: "current-week",
     mlbId: player.mlbId || null,
     name: player.name,
     team: player.team || "",

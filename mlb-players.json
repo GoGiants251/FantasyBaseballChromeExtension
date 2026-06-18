@@ -1180,6 +1180,13 @@
       "active": true
     },
     {
+      "name": "Bryse Wilson",
+      "mlbId": 669060,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Bryson Stott",
       "mlbId": 681082,
       "team": "",
@@ -4722,6 +4729,13 @@
       "active": true
     },
     {
+      "name": "Junior Perez",
+      "mlbId": 678577,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Justin Bruihl",
       "mlbId": 677865,
       "team": "",
@@ -5755,6 +5769,13 @@
       "mlbId": 691777,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Max Rajcic",
+      "mlbId": 691008,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
