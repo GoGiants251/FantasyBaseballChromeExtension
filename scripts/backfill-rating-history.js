@@ -38,7 +38,7 @@ async function main() {
     fetchSeasonGameLogs(players, season, gameLogStartDate, throughDate),
     fetchPreseasonProjectionScores(players)
   ]);
-  const firstRealProjectionDateByPlayer = buildFirstRealProjectionDateLookup(existingHistory);
+  const realProjectionSnapshotsByPlayer = buildRealProjectionSnapshotLookup(existingHistory);
   const mondays = getMondaySnapshotDates(logsByKey, throughDate);
 
   if (mondays.length === 0) {
@@ -54,7 +54,7 @@ async function main() {
       snapshotDate,
       cutoffDate,
       preseasonProjectionScores,
-      firstRealProjectionDateByPlayer
+      realProjectionSnapshotsByPlayer
     });
   });
   const history = mergeRatingHistory(existingHistory, backfillEntries, throughDate);
@@ -145,7 +145,7 @@ function buildSnapshotEntries({
   snapshotDate,
   cutoffDate,
   preseasonProjectionScores,
-  firstRealProjectionDateByPlayer
+  realProjectionSnapshotsByPlayer
 }) {
   const snapshotPlayers = players.map((player) => {
     const splits = logsByKey.get(getPlayerGameLogKey(player.mlbId, player.projection?.group)) || [];
@@ -181,11 +181,18 @@ function buildSnapshotEntries({
       const historyKey = getPlayerHistoryIdentityKey(player);
       const projectionScore = Number(player.projection?.percentileScore) || Number(player.recommendation?.score) || 50;
       const preseasonProjectionScore = preseasonProjectionScores.get(key);
-      const firstRealProjectionDate = firstRealProjectionDateByPlayer.get(historyKey);
+      const realProjectionSnapshots = realProjectionSnapshotsByPlayer.get(historyKey) || [];
+      const latestPriorRealProjection = getLatestRealProjectionBeforeDate(
+        realProjectionSnapshots,
+        snapshotDate
+      );
+      const firstRealProjectionDate = realProjectionSnapshots[0]?.date || "";
       const displayedProjectionScore =
-        Number.isFinite(preseasonProjectionScore) &&
-        (!firstRealProjectionDate || snapshotDate < firstRealProjectionDate)
-          ? Math.round(preseasonProjectionScore)
+        Number.isFinite(latestPriorRealProjection)
+          ? Math.round(latestPriorRealProjection)
+          : Number.isFinite(preseasonProjectionScore) &&
+              (!firstRealProjectionDate || snapshotDate < firstRealProjectionDate)
+            ? Math.round(preseasonProjectionScore)
           : null;
       const seasonScore = regressComponentScore({
         componentScore: componentScores.seasonStats.get(key),
@@ -588,7 +595,7 @@ function addPercentileScores(players, percentilePool = players) {
   });
 }
 
-function buildFirstRealProjectionDateLookup(history) {
+function buildRealProjectionSnapshotLookup(history) {
   const lookup = new Map();
   (history.entries || []).forEach((entry) => {
     const projection = toNullableNumber(entry.scores?.projection);
@@ -600,12 +607,24 @@ function buildFirstRealProjectionDateLookup(history) {
       return;
     }
     const key = getPlayerHistoryIdentityKey(entry);
-    const previousDate = lookup.get(key);
-    if (!previousDate || entry.date < previousDate) {
-      lookup.set(key, entry.date);
+    if (!lookup.has(key)) {
+      lookup.set(key, []);
     }
+    lookup.get(key).push({ date: entry.date, projection });
   });
+
+  lookup.forEach((entries) => {
+    entries.sort((a, b) => String(a.date).localeCompare(String(b.date)));
+  });
+
   return lookup;
+}
+
+function getLatestRealProjectionBeforeDate(realProjectionSnapshots, snapshotDate) {
+  const latest = realProjectionSnapshots
+    .filter((entry) => entry.date < snapshotDate && Number.isFinite(entry.projection))
+    .at(-1);
+  return latest?.projection ?? null;
 }
 
 function mergeRatingHistory(existingHistory, backfillEntries, updatedAt) {
