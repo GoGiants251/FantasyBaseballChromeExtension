@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-06-18",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1439,6 +1439,13 @@
       "active": true
     },
     {
+      "name": "Carson Whisenhunt",
+      "mlbId": 687931,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Carson Williams",
       "mlbId": 700246,
       "team": "",
@@ -2066,13 +2073,6 @@
       "mlbId": 678554,
       "team": "",
       "position": "1B",
-      "active": true
-    },
-    {
-      "name": "Curtis Washington Jr.",
-      "mlbId": 690944,
-      "team": "",
-      "position": "CF",
       "active": true
     },
     {
@@ -2758,7 +2758,7 @@
       "name": "Esmerlyn Valdez",
       "mlbId": 699013,
       "team": "",
-      "position": "OF",
+      "position": "RF",
       "active": true
     },
     {
@@ -3627,6 +3627,13 @@
       "mlbId": 663330,
       "team": "",
       "position": "DH",
+      "active": true
+    },
+    {
+      "name": "Jair Camargo",
+      "mlbId": 665856,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -4792,6 +4799,13 @@
       "active": true
     },
     {
+      "name": "Kahlil Watson",
+      "mlbId": 696135,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Kai-Wei Teng",
       "mlbId": 678906,
       "team": "",
@@ -5418,7 +5432,7 @@
       "name": "LuJames Groover",
       "mlbId": 694410,
       "team": "",
-      "position": "3B",
+      "position": "1B",
       "active": true
     },
     {
