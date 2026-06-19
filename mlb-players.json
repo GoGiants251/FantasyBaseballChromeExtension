@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-18",
+  "updatedAt": "2026-06-19",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1698,6 +1698,13 @@
       "active": true
     },
     {
+      "name": "Christian Moore",
+      "mlbId": 695681,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Christian Roa",
       "mlbId": 685005,
       "team": "",
@@ -3003,7 +3010,7 @@
       "name": "Gary Sánchez",
       "mlbId": 596142,
       "team": "",
-      "position": "DH",
+      "position": "C",
       "active": true
     },
     {
@@ -4745,6 +4752,13 @@
     {
       "name": "Justin Crawford",
       "mlbId": 702222,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Justin Dean",
+      "mlbId": 681909,
       "team": "",
       "position": "CF",
       "active": true
