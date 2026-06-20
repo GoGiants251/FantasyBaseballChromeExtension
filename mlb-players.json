@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-19",
+  "updatedAt": "2026-06-20",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -707,7 +707,7 @@
       "name": "Blaze Jordan",
       "mlbId": 691458,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
@@ -6643,7 +6643,7 @@
       "name": "Randal Grichuk",
       "mlbId": 545341,
       "team": "",
-      "position": "RF",
+      "position": "DH",
       "active": true
     },
     {
@@ -7781,6 +7781,13 @@
       "active": true
     },
     {
+      "name": "Trei Cruz",
+      "mlbId": 669360,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Trent Grisham",
       "mlbId": 663757,
       "team": "",
@@ -7875,7 +7882,7 @@
       "name": "Tristan Gray",
       "mlbId": 656484,
       "team": "",
-      "position": "3B",
+      "position": "SS",
       "active": true
     },
     {
@@ -8427,6 +8434,13 @@
     {
       "name": "Yerry De los Santos",
       "mlbId": 660787,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Yilber Díaz",
+      "mlbId": 700270,
       "team": "",
       "position": "P",
       "active": true
