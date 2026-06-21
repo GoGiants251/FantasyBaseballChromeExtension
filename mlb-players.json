@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-20",
+  "updatedAt": "2026-06-21",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3042,6 +3042,13 @@
       "active": true
     },
     {
+      "name": "Geoff Hartlieb",
+      "mlbId": 664129,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "George Kirby",
       "mlbId": 669923,
       "team": "",
@@ -5888,6 +5895,13 @@
       "mlbId": 621074,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Michael Siani",
+      "mlbId": 672279,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
