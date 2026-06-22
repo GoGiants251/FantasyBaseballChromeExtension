@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-21",
+  "updatedAt": "2026-06-22",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1030,6 +1030,13 @@
       "mlbId": 702153,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Brian Navarreto",
+      "mlbId": 640459,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -4218,6 +4225,13 @@
       "active": true
     },
     {
+      "name": "Joey Meneses",
+      "mlbId": 608841,
+      "team": "",
+      "position": "1B",
+      "active": true
+    },
+    {
       "name": "Joey Ortiz",
       "mlbId": 687401,
       "team": "",
@@ -4234,6 +4248,13 @@
     {
       "name": "Johan Oviedo",
       "mlbId": 670912,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "John Brebbia",
+      "mlbId": 605154,
       "team": "",
       "position": "P",
       "active": true
@@ -4488,6 +4509,20 @@
       "mlbId": 676609,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Jose Cabrera",
+      "mlbId": 703615,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jose Corniell",
+      "mlbId": 692030,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -5009,6 +5044,13 @@
       "active": true
     },
     {
+      "name": "Kohl Drake",
+      "mlbId": 684442,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Kolby Allard",
       "mlbId": 663465,
       "team": "",
@@ -5146,6 +5188,13 @@
       "mlbId": 669065,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Kyle Teel",
+      "mlbId": 691019,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -5662,6 +5711,13 @@
     {
       "name": "Matt Gage",
       "mlbId": 657424,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Matt Krook",
+      "mlbId": 640454,
       "team": "",
       "position": "P",
       "active": true
