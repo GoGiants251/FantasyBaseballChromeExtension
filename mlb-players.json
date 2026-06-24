@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-23",
+  "updatedAt": "2026-06-24",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -620,6 +620,13 @@
       "active": true
     },
     {
+      "name": "Ben Malgeri",
+      "mlbId": 701162,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Ben Rice",
       "mlbId": 700250,
       "team": "",
@@ -658,7 +665,7 @@
       "name": "Blake Dunn",
       "mlbId": 694362,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -714,7 +721,7 @@
       "name": "Bo Bichette",
       "mlbId": 666182,
       "team": "",
-      "position": "3B",
+      "position": "SS",
       "active": true
     },
     {
@@ -1498,7 +1505,7 @@
       "name": "Casey Schmitt",
       "mlbId": 669477,
       "team": "",
-      "position": "DH",
+      "position": "LF",
       "active": true
     },
     {
@@ -4708,6 +4715,13 @@
       "active": true
     },
     {
+      "name": "JP Sears",
+      "mlbId": 676664,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "JR Ritchie",
       "mlbId": 702275,
       "team": "",
@@ -6209,7 +6223,7 @@
       "name": "Nelson Velázquez",
       "mlbId": 676369,
       "team": "",
-      "position": "OF",
+      "position": "LF",
       "active": true
     },
     {
@@ -7389,6 +7403,13 @@
       "active": true
     },
     {
+      "name": "Shane Bieber",
+      "mlbId": 669456,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Shane Drohan",
       "mlbId": 675660,
       "team": "",
@@ -8443,6 +8464,13 @@
       "mlbId": 677800,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Winston Santos",
+      "mlbId": 692437,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
