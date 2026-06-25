@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-24",
+  "updatedAt": "2026-06-25",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1450,6 +1450,13 @@
       "mlbId": 608348,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Carson Palmquist",
+      "mlbId": 687223,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -4893,7 +4900,7 @@
       "name": "Kahlil Watson",
       "mlbId": 696135,
       "team": "",
-      "position": "LF",
+      "position": "RF",
       "active": true
     },
     {
@@ -5060,13 +5067,6 @@
     {
       "name": "Kody Funderburk",
       "mlbId": 681892,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Kohl Drake",
-      "mlbId": 684442,
       "team": "",
       "position": "P",
       "active": true
@@ -5632,6 +5632,13 @@
       "active": true
     },
     {
+      "name": "Marco Raya",
+      "mlbId": 694397,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Marcus Semien",
       "mlbId": 543760,
       "team": "",
@@ -5919,6 +5926,13 @@
       "active": true
     },
     {
+      "name": "Michael Grove",
+      "mlbId": 675627,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Michael Harris II",
       "mlbId": 671739,
       "team": "",
@@ -6096,6 +6110,13 @@
     {
       "name": "Miles Mikolas",
       "mlbId": 571945,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Mitch Bratt",
+      "mlbId": 683352,
       "team": "",
       "position": "P",
       "active": true
@@ -6476,6 +6497,13 @@
       "mlbId": 672724,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Oswaldo Cabrera",
+      "mlbId": 665828,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
