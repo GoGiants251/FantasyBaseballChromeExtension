@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-25",
+  "updatedAt": "2026-06-26",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3266,7 +3266,7 @@
       "active": true
     },
     {
-      "name": "Hao-Yu  Lee",
+      "name": "Hao-Yu Lee",
       "mlbId": 701678,
       "team": "",
       "position": "2B",
@@ -3529,6 +3529,13 @@
       "mlbId": 681252,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jack Brannigan",
+      "mlbId": 687394,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -4750,6 +4757,13 @@
       "active": true
     },
     {
+      "name": "Juan Burgos",
+      "mlbId": 686228,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Juan Mejia",
       "mlbId": 675848,
       "team": "",
@@ -5853,6 +5867,13 @@
       "mlbId": 608331,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Max Kepler",
+      "mlbId": 596146,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -8672,13 +8693,6 @@
     {
       "name": "Zach Agnos",
       "mlbId": 688642,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Zach Brzykcy",
-      "mlbId": 694350,
       "team": "",
       "position": "P",
       "active": true
