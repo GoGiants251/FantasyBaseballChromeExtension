@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-26",
+  "updatedAt": "2026-06-27",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2048,6 +2048,13 @@
       "active": true
     },
     {
+      "name": "Cooper Ingle",
+      "mlbId": 694876,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Cooper Pratt",
       "mlbId": 806198,
       "team": "",
@@ -2409,6 +2416,13 @@
       "mlbId": 623454,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Drew Cavanaugh",
+      "mlbId": 701852,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -3406,6 +3420,13 @@
       "active": true
     },
     {
+      "name": "Hurston Waldrep",
+      "mlbId": 694462,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Hyeseong Kim",
       "mlbId": 808975,
       "team": "",
@@ -3529,13 +3550,6 @@
       "mlbId": 681252,
       "team": "",
       "position": "P",
-      "active": true
-    },
-    {
-      "name": "Jack Brannigan",
-      "mlbId": 687394,
-      "team": "",
-      "position": "SS",
       "active": true
     },
     {
@@ -8058,6 +8072,13 @@
       "mlbId": 675512,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Tsung-Che Cheng",
+      "mlbId": 691907,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
