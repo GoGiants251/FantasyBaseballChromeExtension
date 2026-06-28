@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-27",
+  "updatedAt": "2026-06-28",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2114,7 +2114,7 @@
       "name": "Curtis Mead",
       "mlbId": 678554,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
@@ -2233,7 +2233,7 @@
       "name": "David Hamilton",
       "mlbId": 666152,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -3934,7 +3934,7 @@
       "name": "Jasson Domínguez",
       "mlbId": 691176,
       "team": "",
-      "position": "DH",
+      "position": "RF",
       "active": true
     },
     {
@@ -7386,6 +7386,13 @@
       "mlbId": 680732,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Sean Keys",
+      "mlbId": 815873,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
