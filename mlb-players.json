@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-28",
+  "updatedAt": "2026-06-29",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1974,7 +1974,7 @@
       "name": "Colton Cowser",
       "mlbId": 681297,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -4613,7 +4613,7 @@
       "name": "Jose Siri",
       "mlbId": 642350,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -6101,6 +6101,13 @@
       "active": true
     },
     {
+      "name": "Miguel Ullola",
+      "mlbId": 699044,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Miguel Vargas",
       "mlbId": 678246,
       "team": "",
@@ -7029,6 +7036,13 @@
       "mlbId": 701350,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Romy Gonzalez",
+      "mlbId": 663853,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
