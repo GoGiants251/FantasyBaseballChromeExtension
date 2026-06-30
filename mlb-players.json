@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-29",
+  "updatedAt": "2026-06-30",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1327,6 +1327,13 @@
       "active": true
     },
     {
+      "name": "Cam Cauley",
+      "mlbId": 695508,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Cam Sanders",
       "mlbId": 676742,
       "team": "",
@@ -1960,7 +1967,7 @@
       "name": "Colt Emerson",
       "mlbId": 806068,
       "team": "",
-      "position": "3B",
+      "position": "SS",
       "active": true
     },
     {
@@ -4733,6 +4740,13 @@
       "mlbId": 687985,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Joshua Kuroda-Grauer",
+      "mlbId": 811965,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -7595,7 +7609,7 @@
       "name": "Spencer Jones",
       "mlbId": 682987,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
