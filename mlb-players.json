@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-06-30",
+  "updatedAt": "2026-07-01",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3035,6 +3035,13 @@
       "active": true
     },
     {
+      "name": "Garrett Stallings",
+      "mlbId": 668831,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Garrett Stubbs",
       "mlbId": 596117,
       "team": "",
@@ -3501,6 +3508,13 @@
       "mlbId": 671056,
       "team": "",
       "position": "DH",
+      "active": true
+    },
+    {
+      "name": "Ivan Johnson",
+      "mlbId": 671155,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
@@ -8749,6 +8763,13 @@
     {
       "name": "Zach Agnos",
       "mlbId": 688642,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Zach Brzykcy",
+      "mlbId": 694350,
       "team": "",
       "position": "P",
       "active": true
