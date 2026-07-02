@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-07-02",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2979,6 +2979,13 @@
       "active": true
     },
     {
+      "name": "Gabriel Hughes",
+      "mlbId": 687312,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Gabriel Moreno",
       "mlbId": 672515,
       "team": "",
@@ -4379,6 +4386,13 @@
       "active": true
     },
     {
+      "name": "Jonatan Clase",
+      "mlbId": 682729,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Jonathan Aranda",
       "mlbId": 666018,
       "team": "",
@@ -4577,6 +4591,13 @@
     {
       "name": "Jose Corniell",
       "mlbId": 692030,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jose Cuas",
+      "mlbId": 621016,
       "team": "",
       "position": "P",
       "active": true
@@ -5586,7 +5607,7 @@
       "name": "Luis Urías",
       "mlbId": 649966,
       "team": "",
-      "position": "SS",
+      "position": "2B",
       "active": true
     },
     {
@@ -6370,7 +6391,7 @@
       "name": "Nick Loftin",
       "mlbId": 679845,
       "team": "",
-      "position": "2B",
+      "position": "3B",
       "active": true
     },
     {
@@ -6847,6 +6868,13 @@
       "mlbId": 668227,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Randy Dobnak",
+      "mlbId": 677976,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -7924,7 +7952,7 @@
       "name": "Tommy Edman",
       "mlbId": 669242,
       "team": "",
-      "position": "2B",
+      "position": "LF",
       "active": true
     },
     {
