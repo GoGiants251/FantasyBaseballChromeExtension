@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-02",
+  "updatedAt": "2026-07-03",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -624,6 +624,13 @@
       "mlbId": 701162,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Ben Peoples",
+      "mlbId": 687239,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -5450,7 +5457,7 @@
       "active": true
     },
     {
-      "name": "Lou Trivino",
+      "name": "Lou Trivino III",
       "mlbId": 642152,
       "team": "",
       "position": "P",
@@ -5636,6 +5643,13 @@
       "mlbId": 681432,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Luke Maile",
+      "mlbId": 571912,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
