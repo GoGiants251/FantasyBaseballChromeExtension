@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-04",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2206,6 +2206,13 @@
       "mlbId": 643376,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Danny Young",
+      "mlbId": 664849,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
