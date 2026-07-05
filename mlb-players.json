@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-04",
+  "updatedAt": "2026-07-05",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1049,6 +1049,13 @@
     {
       "name": "Brian Navarreto",
       "mlbId": 640459,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
+      "name": "Brian Serven",
+      "mlbId": 661531,
       "team": "",
       "position": "C",
       "active": true
@@ -2685,6 +2692,13 @@
       "active": true
     },
     {
+      "name": "Eliezer Alfonzo",
+      "mlbId": 672613,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Elly De La Cruz",
       "mlbId": 682829,
       "team": "",
@@ -3441,6 +3455,13 @@
       "active": true
     },
     {
+      "name": "Hunter Greene",
+      "mlbId": 668881,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Hunter Harvey",
       "mlbId": 640451,
       "team": "",
@@ -3801,7 +3822,7 @@
       "name": "Jake Mangum",
       "mlbId": 663968,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -5936,7 +5957,7 @@
       "name": "Mauricio Dubón",
       "mlbId": 643289,
       "team": "",
-      "position": "SS",
+      "position": "LF",
       "active": true
     },
     {
@@ -7657,6 +7678,13 @@
     {
       "name": "Spencer Arrighetti",
       "mlbId": 681293,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Spencer Bivens",
+      "mlbId": 702352,
       "team": "",
       "position": "P",
       "active": true
