@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-05",
+  "updatedAt": "2026-07-06",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2594,6 +2594,13 @@
       "active": true
     },
     {
+      "name": "Eddy Yean",
+      "mlbId": 678868,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Edgar Quero",
       "mlbId": 700337,
       "team": "",
@@ -3303,6 +3310,13 @@
     {
       "name": "Griffin Jax",
       "mlbId": 643377,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Guillo Zuñiga",
+      "mlbId": 670871,
       "team": "",
       "position": "P",
       "active": true
