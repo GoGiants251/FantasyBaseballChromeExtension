@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-06",
+  "updatedAt": "2026-07-07",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2885,6 +2885,13 @@
       "mlbId": 694497,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Evan Phillips",
+      "mlbId": 623465,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -6675,6 +6682,13 @@
       "active": true
     },
     {
+      "name": "Owen Murphy",
+      "mlbId": 702566,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Ozzie Albies",
       "mlbId": 645277,
       "team": "",
@@ -6712,6 +6726,13 @@
     {
       "name": "Patrick Corbin",
       "mlbId": 571578,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Patrick Sandoval",
+      "mlbId": 663776,
       "team": "",
       "position": "P",
       "active": true
