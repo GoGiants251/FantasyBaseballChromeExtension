@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-07",
+  "updatedAt": "2026-07-08",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -141,6 +141,13 @@
       "mlbId": 660604,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Alan Roden",
+      "mlbId": 702176,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -1110,6 +1117,13 @@
       "active": true
     },
     {
+      "name": "Bruce Zimmermann",
+      "mlbId": 669145,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Bryan Abreu",
       "mlbId": 650556,
       "team": "",
@@ -2050,6 +2064,13 @@
     {
       "name": "Connor Seabold",
       "mlbId": 657756,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Connor Thomas",
+      "mlbId": 671162,
       "team": "",
       "position": "P",
       "active": true
@@ -3637,6 +3658,13 @@
       "active": true
     },
     {
+      "name": "Jack Brannigan",
+      "mlbId": 687394,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Jack Dreyer",
       "mlbId": 676263,
       "team": "",
@@ -4176,6 +4204,13 @@
       "active": true
     },
     {
+      "name": "Jhony Brito",
+      "mlbId": 666745,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jhostynxon Garcia",
       "mlbId": 691373,
       "team": "",
@@ -4585,7 +4620,7 @@
       "name": "Jorge Polanco",
       "mlbId": 593871,
       "team": "",
-      "position": "1B",
+      "position": "DH",
       "active": true
     },
     {
@@ -5604,6 +5639,13 @@
       "active": true
     },
     {
+      "name": "Luis Lara",
+      "mlbId": 800325,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Luis Matos",
       "mlbId": 682641,
       "team": "",
@@ -5914,6 +5956,13 @@
     {
       "name": "Matt Pushard",
       "mlbId": 690155,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Matt Seelinger",
+      "mlbId": 676910,
       "team": "",
       "position": "P",
       "active": true
@@ -6783,7 +6832,7 @@
       "name": "Pavin Smith",
       "mlbId": 656976,
       "team": "",
-      "position": "DH",
+      "position": "1B",
       "active": true
     },
     {
@@ -7175,7 +7224,7 @@
       "name": "Romy Gonzalez",
       "mlbId": 663853,
       "team": "",
-      "position": "1B",
+      "position": "DH",
       "active": true
     },
     {
@@ -7539,7 +7588,7 @@
       "name": "Sean Keys",
       "mlbId": 815873,
       "team": "",
-      "position": "3B",
+      "position": "DH",
       "active": true
     },
     {
@@ -7826,7 +7875,7 @@
       "name": "Stuart Fairchild",
       "mlbId": 656413,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -8700,6 +8749,13 @@
     {
       "name": "Winston Santos",
       "mlbId": 692437,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Woo-Suk Go",
+      "mlbId": 808970,
       "team": "",
       "position": "P",
       "active": true
