@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-07-09",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2164,6 +2164,13 @@
       "mlbId": 687221,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Dan Hammer",
+      "mlbId": 669285,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -5632,6 +5639,13 @@
       "active": true
     },
     {
+      "name": "Luis Gastelum",
+      "mlbId": 703725,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Luis Gil",
       "mlbId": 661563,
       "team": "",
@@ -5712,7 +5726,7 @@
       "name": "Luisangel Acuña",
       "mlbId": 682668,
       "team": "",
-      "position": "CF",
+      "position": "SS",
       "active": true
     },
     {
@@ -7798,7 +7812,7 @@
       "name": "Spencer Steer",
       "mlbId": 668715,
       "team": "",
-      "position": "LF",
+      "position": "1B",
       "active": true
     },
     {
@@ -8786,6 +8800,13 @@
       "mlbId": 669364,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Xzavion Curry",
+      "mlbId": 675540,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
