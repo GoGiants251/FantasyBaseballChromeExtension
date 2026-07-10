@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-10",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2675,6 +2675,13 @@
       "mlbId": 593958,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Eduardo Valencia",
+      "mlbId": 680664,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
