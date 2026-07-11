@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-10",
+  "updatedAt": "2026-07-11",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2167,13 +2167,6 @@
       "active": true
     },
     {
-      "name": "Dan Hammer",
-      "mlbId": 669285,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
       "name": "Dane Myers",
       "mlbId": 667472,
       "team": "",
@@ -3284,6 +3277,13 @@
       "mlbId": 656550,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Grant McCray",
+      "mlbId": 687529,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
@@ -8040,6 +8040,13 @@
       "active": true
     },
     {
+      "name": "Thomas Harrington",
+      "mlbId": 802419,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Thomas Saggese",
       "mlbId": 695336,
       "team": "",
@@ -8098,6 +8105,13 @@
     {
       "name": "Tobias Myers",
       "mlbId": 668964,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Tom Cosgrove",
+      "mlbId": 676680,
       "team": "",
       "position": "P",
       "active": true
