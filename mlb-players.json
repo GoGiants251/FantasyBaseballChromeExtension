@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-07-12",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1044,6 +1044,13 @@
       "mlbId": 664954,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Brewer Hicklen",
+      "mlbId": 676551,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
@@ -5425,7 +5432,7 @@
       "name": "LaMonte Wade Jr.",
       "mlbId": 664774,
       "team": "",
-      "position": "1B",
+      "position": "LF",
       "active": true
     },
     {
@@ -5438,6 +5445,13 @@
     {
       "name": "Landen Roupp",
       "mlbId": 694738,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Landon Knack",
+      "mlbId": 689017,
       "team": "",
       "position": "P",
       "active": true
@@ -6614,6 +6628,13 @@
     {
       "name": "Noah Cameron",
       "mlbId": 702070,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Noah Murdock",
+      "mlbId": 668716,
       "team": "",
       "position": "P",
       "active": true
@@ -8037,13 +8058,6 @@
       "mlbId": 606192,
       "team": "",
       "position": "LF",
-      "active": true
-    },
-    {
-      "name": "Thomas Harrington",
-      "mlbId": 802419,
-      "team": "",
-      "position": "P",
       "active": true
     },
     {
