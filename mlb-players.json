@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-13",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -57,6 +57,13 @@
       "mlbId": 605400,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Abimelec Ortiz",
+      "mlbId": 694673,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
@@ -1838,6 +1845,13 @@
       "active": true
     },
     {
+      "name": "CJ Van Eyk",
+      "mlbId": 669310,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Clay Holmes",
       "mlbId": 605280,
       "team": "",
@@ -2771,6 +2785,13 @@
     {
       "name": "Emerson Hancock",
       "mlbId": 676106,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Emiliano Teodo",
+      "mlbId": 693713,
       "team": "",
       "position": "P",
       "active": true
@@ -4059,6 +4080,13 @@
     {
       "name": "Jason Alexander",
       "mlbId": 669920,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jason Foley",
+      "mlbId": 671345,
       "team": "",
       "position": "P",
       "active": true
@@ -6628,13 +6656,6 @@
     {
       "name": "Noah Cameron",
       "mlbId": 702070,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Noah Murdock",
-      "mlbId": 668716,
       "team": "",
       "position": "P",
       "active": true
