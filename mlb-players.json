@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3843,7 +3843,7 @@
       "name": "Jahmai Jones",
       "mlbId": 663330,
       "team": "",
-      "position": "DH",
+      "position": "OF",
       "active": true
     },
     {
