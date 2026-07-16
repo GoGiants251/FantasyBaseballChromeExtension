@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-16",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -6115,6 +6115,13 @@
       "active": true
     },
     {
+      "name": "Max Kranick",
+      "mlbId": 668820,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Max Lazar",
       "mlbId": 676661,
       "team": "",
@@ -8987,6 +8994,13 @@
     {
       "name": "Yunior Marte",
       "mlbId": 628708,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Yunior Tur",
+      "mlbId": 814305,
       "team": "",
       "position": "P",
       "active": true
