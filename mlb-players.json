@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-17",
+  "updatedAt": "2026-07-18",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3434,6 +3434,13 @@
       "active": true
     },
     {
+      "name": "Harry Ford",
+      "mlbId": 695670,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Hayden Juenger",
       "mlbId": 696522,
       "team": "",
@@ -5646,6 +5653,13 @@
       "active": true
     },
     {
+      "name": "Lucas Spence",
+      "mlbId": 828599,
+      "team": "",
+      "position": "OF",
+      "active": true
+    },
+    {
       "name": "Luinder Avila",
       "mlbId": 679883,
       "team": "",
@@ -7648,6 +7662,13 @@
       "active": true
     },
     {
+      "name": "Scott Blewett",
+      "mlbId": 656240,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Scott Kingery",
       "mlbId": 664068,
       "team": "",
@@ -8201,6 +8222,13 @@
       "active": true
     },
     {
+      "name": "Tommy White",
+      "mlbId": 695720,
+      "team": "",
+      "position": "3B",
+      "active": true
+    },
+    {
       "name": "Tomoyuki Sugano",
       "mlbId": 608372,
       "team": "",
@@ -8471,6 +8499,13 @@
       "mlbId": 641755,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Tyler Locklear",
+      "mlbId": 682988,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
