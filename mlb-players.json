@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-07-19",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -154,7 +154,7 @@
       "name": "Alan Roden",
       "mlbId": 702176,
       "team": "",
-      "position": "LF",
+      "position": "RF",
       "active": true
     },
     {
@@ -637,7 +637,7 @@
       "name": "Ben Malgeri",
       "mlbId": 701162,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -3073,7 +3073,7 @@
       "name": "Gabriel Arias",
       "mlbId": 672356,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -4935,7 +4935,7 @@
       "name": "Joshua Kuroda-Grauer",
       "mlbId": 811965,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -5272,6 +5272,13 @@
       "mlbId": 805808,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Khristian Curtis",
+      "mlbId": 694753,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -6510,7 +6517,7 @@
       "name": "Nathan Church",
       "mlbId": 701675,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -7413,7 +7420,7 @@
       "name": "Ryan Kreidler",
       "mlbId": 668952,
       "team": "",
-      "position": "CF",
+      "position": "SS",
       "active": true
     },
     {
