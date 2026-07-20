@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-19",
+  "updatedAt": "2026-07-20",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2752,6 +2752,13 @@
       "mlbId": 553869,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Elieser Hernández",
+      "mlbId": 622694,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -9069,6 +9076,13 @@
       "active": true
     },
     {
+      "name": "Zac Thornton",
+      "mlbId": 804267,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Zach Agnos",
       "mlbId": 688642,
       "team": "",
@@ -9134,13 +9148,6 @@
     {
       "name": "Zach Pop",
       "mlbId": 647315,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Zach Thornton",
-      "mlbId": 804267,
       "team": "",
       "position": "P",
       "active": true
