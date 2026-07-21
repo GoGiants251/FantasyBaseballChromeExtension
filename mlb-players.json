@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-07-21",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -258,6 +258,13 @@
     {
       "name": "Alex Lange",
       "mlbId": 656638,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Alex McFarlane",
+      "mlbId": 686934,
       "team": "",
       "position": "P",
       "active": true
@@ -7344,6 +7351,13 @@
       "mlbId": 660670,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Ronel Blanco",
+      "mlbId": 669854,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
