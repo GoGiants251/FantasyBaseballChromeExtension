@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-07-22",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -679,7 +679,7 @@
       "name": "Billy Cook",
       "mlbId": 695257,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -749,7 +749,7 @@
       "name": "Bo Bichette",
       "mlbId": 666182,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -1156,6 +1156,13 @@
       "mlbId": 641329,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Bryan De La Cruz",
+      "mlbId": 650559,
+      "team": "",
+      "position": "OF",
       "active": true
     },
     {
@@ -3266,6 +3273,13 @@
       "active": true
     },
     {
+      "name": "Gerardo Carrillo",
+      "mlbId": 672629,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Germán Márquez",
       "mlbId": 608566,
       "team": "",
@@ -5324,6 +5338,13 @@
       "active": true
     },
     {
+      "name": "Kohl Drake",
+      "mlbId": 684442,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Kolby Allard",
       "mlbId": 663465,
       "team": "",
@@ -5916,6 +5937,13 @@
       "mlbId": 691785,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Marco Gonzales",
+      "mlbId": 594835,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
