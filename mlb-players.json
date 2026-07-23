@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-22",
+  "updatedAt": "2026-07-23",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -407,6 +407,13 @@
       "mlbId": 683734,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Andrew Velazquez",
+      "mlbId": 623205,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -1064,7 +1071,7 @@
       "name": "Brewer Hicklen",
       "mlbId": 676551,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -1386,7 +1393,7 @@
       "name": "Cam Cauley",
       "mlbId": 695508,
       "team": "",
-      "position": "SS",
+      "position": "CF",
       "active": true
     },
     {
@@ -5698,7 +5705,7 @@
       "name": "Lucas Spence",
       "mlbId": 828599,
       "team": "",
-      "position": "OF",
+      "position": "CF",
       "active": true
     },
     {
@@ -7609,7 +7616,7 @@
       "name": "Salvador Perez",
       "mlbId": 521692,
       "team": "",
-      "position": "C",
+      "position": "DH",
       "active": true
     },
     {
@@ -8624,7 +8631,7 @@
       "name": "Tyler Tolbert",
       "mlbId": 686475,
       "team": "",
-      "position": "2B",
+      "position": "SS",
       "active": true
     },
     {
