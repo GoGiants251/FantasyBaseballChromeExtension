@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -4036,6 +4036,13 @@
       "active": true
     },
     {
+      "name": "James Triantos",
+      "mlbId": 701649,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "James Wood",
       "mlbId": 695578,
       "team": "",
@@ -6990,6 +6997,13 @@
       "active": true
     },
     {
+      "name": "Payton Henry",
+      "mlbId": 668721,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Payton Tolle",
       "mlbId": 801139,
       "team": "",
@@ -7869,6 +7883,13 @@
       "mlbId": 542888,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Shawn Ross",
+      "mlbId": 676566,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
