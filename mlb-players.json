@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-07-26",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1082,6 +1082,13 @@
       "active": true
     },
     {
+      "name": "Brian Keller",
+      "mlbId": 662144,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Brian Navarreto",
       "mlbId": 640459,
       "team": "",
@@ -1134,7 +1141,7 @@
       "name": "Brooks Lee",
       "mlbId": 686797,
       "team": "",
-      "position": "SS",
+      "position": "3B",
       "active": true
     },
     {
@@ -1785,7 +1792,7 @@
       "name": "Christian Encarnacion-Strand",
       "mlbId": 687952,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
@@ -2688,7 +2695,7 @@
       "name": "Edmundo Sosa",
       "mlbId": 624641,
       "team": "",
-      "position": "2B",
+      "position": "LF",
       "active": true
     },
     {
@@ -5782,7 +5789,7 @@
       "name": "Luis Lara",
       "mlbId": 800325,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -6412,7 +6419,7 @@
       "name": "Miguel Rojas",
       "mlbId": 500743,
       "team": "",
-      "position": "SS",
+      "position": "2B",
       "active": true
     },
     {
