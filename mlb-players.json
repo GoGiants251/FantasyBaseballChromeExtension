@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-26",
+  "updatedAt": "2026-07-27",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3423,7 +3423,7 @@
       "name": "Griffin Conine",
       "mlbId": 665052,
       "team": "",
-      "position": "LF",
+      "position": "RF",
       "active": true
     },
     {
