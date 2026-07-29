@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-07-29",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5502,7 +5502,7 @@
       "name": "Kyle Stowers",
       "mlbId": 669065,
       "team": "",
-      "position": "LF",
+      "position": "1B",
       "active": true
     },
     {
@@ -6850,6 +6850,13 @@
       "active": true
     },
     {
+      "name": "Osleivis Basabe",
+      "mlbId": 678545,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Osvaldo Bido",
       "mlbId": 674370,
       "team": "",
@@ -7004,13 +7011,6 @@
       "active": true
     },
     {
-      "name": "Payton Henry",
-      "mlbId": 668721,
-      "team": "",
-      "position": "C",
-      "active": true
-    },
-    {
       "name": "Payton Tolle",
       "mlbId": 801139,
       "team": "",
@@ -7055,6 +7055,13 @@
     {
       "name": "Peter Lambert",
       "mlbId": 663567,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Peter Strzelecki",
+      "mlbId": 657265,
       "team": "",
       "position": "P",
       "active": true
