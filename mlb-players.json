@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-30",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -139,6 +139,13 @@
     {
       "name": "AJ Blubaugh",
       "mlbId": 805123,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "AJ Smith-Shawver",
+      "mlbId": 700363,
       "team": "",
       "position": "P",
       "active": true
@@ -3497,6 +3504,13 @@
       "active": true
     },
     {
+      "name": "Hayden Wesneski",
+      "mlbId": 669713,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Heliot Ramos",
       "mlbId": 671218,
       "team": "",
@@ -3836,7 +3850,7 @@
       "name": "Jacob Gonzalez",
       "mlbId": 694378,
       "team": "",
-      "position": "1B",
+      "position": "SS",
       "active": true
     },
     {
@@ -3899,7 +3913,7 @@
       "name": "Jahmai Jones",
       "mlbId": 663330,
       "team": "",
-      "position": "OF",
+      "position": "DH",
       "active": true
     },
     {
@@ -6258,7 +6272,7 @@
       "name": "Max Schuemann",
       "mlbId": 680474,
       "team": "",
-      "position": "SS",
+      "position": "LF",
       "active": true
     },
     {
@@ -6754,6 +6768,13 @@
     {
       "name": "Noah Cameron",
       "mlbId": 702070,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Noah Murdock",
+      "mlbId": 668716,
       "team": "",
       "position": "P",
       "active": true
@@ -8043,7 +8064,7 @@
       "name": "Steven Kwan",
       "mlbId": 680757,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -8215,6 +8236,13 @@
       "active": true
     },
     {
+      "name": "Thomas Pannone",
+      "mlbId": 623381,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Thomas Saggese",
       "mlbId": 695336,
       "team": "",
@@ -8288,7 +8316,7 @@
       "name": "Tommy Edman",
       "mlbId": 669242,
       "team": "",
-      "position": "LF",
+      "position": "2B",
       "active": true
     },
     {
@@ -8436,6 +8464,13 @@
       "mlbId": 596115,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Trevor Williams",
+      "mlbId": 592866,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
