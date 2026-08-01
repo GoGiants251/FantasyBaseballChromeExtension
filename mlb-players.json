@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-07-31",
+  "updatedAt": "2026-08-01",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -239,6 +239,13 @@
       "mlbId": 669743,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Alex Cook",
+      "mlbId": 702047,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -519,6 +526,13 @@
       "mlbId": 683011,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Antoine Kelly",
+      "mlbId": 681520,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -1973,6 +1987,13 @@
     {
       "name": "Cole Henry",
       "mlbId": 669371,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Cole Irvin",
+      "mlbId": 608344,
       "team": "",
       "position": "P",
       "active": true
@@ -4659,6 +4680,13 @@
       "active": true
     },
     {
+      "name": "Jonathan Ornelas",
+      "mlbId": 680716,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Jonathan Pintaro",
       "mlbId": 702752,
       "team": "",
@@ -5905,6 +5933,13 @@
       "active": true
     },
     {
+      "name": "Luke Murphy",
+      "mlbId": 684665,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Luke Raley",
       "mlbId": 670042,
       "team": "",
@@ -6203,6 +6238,13 @@
       "mlbId": 668974,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Max Clark",
+      "mlbId": 703601,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
