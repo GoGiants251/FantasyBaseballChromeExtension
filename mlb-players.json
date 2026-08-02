@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-01",
+  "updatedAt": "2026-08-02",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -650,6 +650,13 @@
     {
       "name": "Beck Way",
       "mlbId": 694360,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Ben Bowden",
+      "mlbId": 641386,
       "team": "",
       "position": "P",
       "active": true
@@ -5352,6 +5359,13 @@
       "active": true
     },
     {
+      "name": "Kevin Herget",
+      "mlbId": 643361,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Kevin Kelly",
       "mlbId": 687330,
       "team": "",
@@ -6626,6 +6640,13 @@
       "active": true
     },
     {
+      "name": "Nate Furman",
+      "mlbId": 801501,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Nate Pearson",
       "mlbId": 663878,
       "team": "",
@@ -6852,6 +6873,13 @@
     {
       "name": "Nolan Hoffman",
       "mlbId": 676510,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Nolan Kingham",
+      "mlbId": 663884,
       "team": "",
       "position": "P",
       "active": true
@@ -7174,6 +7202,13 @@
     {
       "name": "PJ Poulin",
       "mlbId": 676571,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Quinn Mathews",
+      "mlbId": 687273,
       "team": "",
       "position": "P",
       "active": true
