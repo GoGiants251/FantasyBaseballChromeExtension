@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-02",
+  "updatedAt": "2026-08-03",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1204,7 +1204,7 @@
       "name": "Bryan De La Cruz",
       "mlbId": 650559,
       "team": "",
-      "position": "OF",
+      "position": "RF",
       "active": true
     },
     {
@@ -1238,6 +1238,13 @@
     {
       "name": "Bryan Woo",
       "mlbId": 693433,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Bryce Conley",
+      "mlbId": 676785,
       "team": "",
       "position": "P",
       "active": true
@@ -2534,7 +2541,7 @@
       "name": "Donovan Walton",
       "mlbId": 622268,
       "team": "",
-      "position": "3B",
+      "position": "2B",
       "active": true
     },
     {
@@ -7452,6 +7459,13 @@
       "active": true
     },
     {
+      "name": "Robert Stock",
+      "mlbId": 476594,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Robert Suarez",
       "mlbId": 663158,
       "team": "",
@@ -8813,7 +8827,7 @@
       "name": "Tyrone Taylor",
       "mlbId": 621438,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
