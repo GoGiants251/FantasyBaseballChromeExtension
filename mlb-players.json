@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-04",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2471,7 +2471,7 @@
       "name": "Derek Hill",
       "mlbId": 656537,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -5324,6 +5324,13 @@
       "active": true
     },
     {
+      "name": "Kenny Piper",
+      "mlbId": 700652,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Kerry Carpenter",
       "mlbId": 681481,
       "team": "",
@@ -6608,7 +6615,7 @@
       "name": "Moisés Ballesteros",
       "mlbId": 694208,
       "team": "",
-      "position": "DH",
+      "position": "C",
       "active": true
     },
     {
@@ -6721,6 +6728,13 @@
       "mlbId": 663743,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Nick Frasso",
+      "mlbId": 693308,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
