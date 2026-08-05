@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-05",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -417,6 +417,13 @@
       "active": true
     },
     {
+      "name": "Andrew Pinckney",
+      "mlbId": 687605,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Andrew Vaughn",
       "mlbId": 683734,
       "team": "",
@@ -676,6 +683,13 @@
       "active": true
     },
     {
+      "name": "Ben Joyce",
+      "mlbId": 690829,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Ben Malgeri",
       "mlbId": 701162,
       "team": "",
@@ -694,6 +708,13 @@
       "mlbId": 700250,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Ben Rortvedt",
+      "mlbId": 666163,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -755,6 +776,13 @@
     {
       "name": "Blake Treinen",
       "mlbId": 595014,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Blake Weiman",
+      "mlbId": 676620,
       "team": "",
       "position": "P",
       "active": true
@@ -1238,13 +1266,6 @@
     {
       "name": "Bryan Woo",
       "mlbId": 693433,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Bryce Conley",
-      "mlbId": 676785,
       "team": "",
       "position": "P",
       "active": true
@@ -1831,6 +1852,13 @@
       "active": true
     },
     {
+      "name": "Christian Franklin",
+      "mlbId": 681047,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Christian Koss",
       "mlbId": 683766,
       "team": "",
@@ -2244,6 +2272,13 @@
       "active": true
     },
     {
+      "name": "Cristian Pache",
+      "mlbId": 665506,
+      "team": "",
+      "position": "OF",
+      "active": true
+    },
+    {
       "name": "Cristopher Sánchez",
       "mlbId": 650911,
       "team": "",
@@ -2442,6 +2477,13 @@
     {
       "name": "Dean Kremer",
       "mlbId": 665152,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Dedniel Núñez",
+      "mlbId": 673380,
       "team": "",
       "position": "P",
       "active": true
@@ -2717,6 +2759,13 @@
       "mlbId": 678868,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Eddys Leonard",
+      "mlbId": 678760,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -3301,6 +3350,13 @@
       "active": true
     },
     {
+      "name": "George Lombard Jr.",
+      "mlbId": 806146,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "George Soriano",
       "mlbId": 666277,
       "team": "",
@@ -3543,6 +3599,13 @@
       "mlbId": 669713,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Héctor Rodríguez",
+      "mlbId": 699302,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -4283,6 +4346,13 @@
     {
       "name": "Jeffrey Springs",
       "mlbId": 605488,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jefry Yan",
+      "mlbId": 642376,
       "team": "",
       "position": "P",
       "active": true
@@ -6661,6 +6731,13 @@
       "active": true
     },
     {
+      "name": "Nate Lavender",
+      "mlbId": 681320,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Nate Pearson",
       "mlbId": 663878,
       "team": "",
@@ -7041,6 +7118,13 @@
     {
       "name": "Parker Messick",
       "mlbId": 800048,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Parker Mushinski",
+      "mlbId": 656786,
       "team": "",
       "position": "P",
       "active": true
