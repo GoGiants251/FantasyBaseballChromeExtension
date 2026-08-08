@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-08",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1098,6 +1098,13 @@
     {
       "name": "Brenton Doyle",
       "mlbId": 686668,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Brett Bateman",
+      "mlbId": 703520,
       "team": "",
       "position": "CF",
       "active": true
@@ -3938,6 +3945,13 @@
       "active": true
     },
     {
+      "name": "Jackson Jobe",
+      "mlbId": 695549,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jackson Merrill",
       "mlbId": 701538,
       "team": "",
@@ -4834,6 +4848,13 @@
       "active": true
     },
     {
+      "name": "Jordan Montgomery",
+      "mlbId": 656756,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jordan Romano",
       "mlbId": 605447,
       "team": "",
@@ -5314,6 +5335,13 @@
       "mlbId": 669704,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Kaelen Culpepper",
+      "mlbId": 701785,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -7410,6 +7438,13 @@
       "active": true
     },
     {
+      "name": "Raymond Burgos",
+      "mlbId": 670103,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Raynel Delgado",
       "mlbId": 669384,
       "team": "",
@@ -7672,7 +7707,7 @@
       "name": "Royce Lewis",
       "mlbId": 668904,
       "team": "",
-      "position": "3B",
+      "position": "1B",
       "active": true
     },
     {
@@ -8618,6 +8653,13 @@
       "mlbId": 663757,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Trent Harris",
+      "mlbId": 805345,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
