@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-08",
+  "updatedAt": "2026-08-09",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1876,7 +1876,7 @@
       "name": "Christian Koss",
       "mlbId": 683766,
       "team": "",
-      "position": "2B",
+      "position": "3B",
       "active": true
     },
     {
@@ -3578,6 +3578,13 @@
       "mlbId": 673490,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Hagen Smith",
+      "mlbId": 696146,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -8385,6 +8392,13 @@
     {
       "name": "Tanner Gordon",
       "mlbId": 685299,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Tanner McDougal",
+      "mlbId": 701780,
       "team": "",
       "position": "P",
       "active": true
