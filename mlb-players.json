@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-09",
+  "updatedAt": "2026-08-10",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3938,6 +3938,13 @@
       "active": true
     },
     {
+      "name": "Jack Weisenburger",
+      "mlbId": 674073,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jackson Chourio",
       "mlbId": 694192,
       "team": "",
@@ -4123,7 +4130,7 @@
       "name": "Jake McCarthy",
       "mlbId": 664983,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -4484,6 +4491,13 @@
       "active": true
     },
     {
+      "name": "Jihwan Bae",
+      "mlbId": 678225,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Jim Jarvis",
       "mlbId": 805347,
       "team": "",
@@ -4719,6 +4733,13 @@
       "mlbId": 668941,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jonah Bride",
+      "mlbId": 681146,
+      "team": "",
+      "position": "3B",
       "active": true
     },
     {
@@ -7091,7 +7112,7 @@
       "name": "Osleivis Basabe",
       "mlbId": 678545,
       "team": "",
-      "position": "SS",
+      "position": "2B",
       "active": true
     },
     {
@@ -8119,6 +8140,13 @@
     {
       "name": "Seth Lugo",
       "mlbId": 607625,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Seth Martinez",
+      "mlbId": 661527,
       "team": "",
       "position": "P",
       "active": true
