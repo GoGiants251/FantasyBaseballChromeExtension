@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-11",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -9549,6 +9549,13 @@
       "mlbId": 656716,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Zach Morgan",
+      "mlbId": 681439,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
