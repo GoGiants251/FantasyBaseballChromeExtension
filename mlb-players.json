@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-11",
+  "updatedAt": "2026-08-12",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -386,6 +386,13 @@
       "mlbId": 552640,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Andrew Knizner",
+      "mlbId": 668800,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -867,6 +874,13 @@
     {
       "name": "Bradgley Rodriguez",
       "mlbId": 699134,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Bradley Hanner",
+      "mlbId": 690440,
       "team": "",
       "position": "P",
       "active": true
@@ -6598,6 +6612,13 @@
       "active": true
     },
     {
+      "name": "Michael Toglia",
+      "mlbId": 669911,
+      "team": "",
+      "position": "1B",
+      "active": true
+    },
+    {
       "name": "Michael Wacha",
       "mlbId": 608379,
       "team": "",
@@ -8439,6 +8460,13 @@
       "active": true
     },
     {
+      "name": "Tanner Rainey",
+      "mlbId": 663432,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Tanner Scott",
       "mlbId": 656945,
       "team": "",
@@ -9496,6 +9524,13 @@
       "active": true
     },
     {
+      "name": "Zac Veen",
+      "mlbId": 691728,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Zach Agnos",
       "mlbId": 688642,
       "team": "",
@@ -9549,13 +9584,6 @@
       "mlbId": 656716,
       "team": "",
       "position": "2B",
-      "active": true
-    },
-    {
-      "name": "Zach Morgan",
-      "mlbId": 681439,
-      "team": "",
-      "position": "C",
       "active": true
     },
     {
