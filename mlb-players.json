@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-13",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -71,6 +71,13 @@
       "mlbId": 682842,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Adael Amador",
+      "mlbId": 691182,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
@@ -2279,6 +2286,13 @@
       "active": true
     },
     {
+      "name": "Corey Julks",
+      "mlbId": 667452,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Corey Seager",
       "mlbId": 608369,
       "team": "",
@@ -3975,6 +3989,13 @@
     {
       "name": "Jackson Jobe",
       "mlbId": 695549,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jackson Kent",
+      "mlbId": 800600,
       "team": "",
       "position": "P",
       "active": true
@@ -6860,7 +6881,7 @@
       "name": "Nathaniel Lowe",
       "mlbId": 663993,
       "team": "",
-      "position": "DH",
+      "position": "1B",
       "active": true
     },
     {
@@ -9079,7 +9100,7 @@
       "name": "Victor Bericoto",
       "mlbId": 682674,
       "team": "",
-      "position": "RF",
+      "position": "LF",
       "active": true
     },
     {
