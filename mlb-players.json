@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-14",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -490,7 +490,7 @@
       "name": "Angel Genao",
       "mlbId": 694197,
       "team": "",
-      "position": "3B",
+      "position": "2B",
       "active": true
     },
     {
@@ -1890,7 +1890,7 @@
       "name": "Christian Franklin",
       "mlbId": 681047,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -3661,7 +3661,7 @@
       "name": "Héctor Rodríguez",
       "mlbId": 699302,
       "team": "",
-      "position": "LF",
+      "position": "RF",
       "active": true
     },
     {
@@ -8877,6 +8877,13 @@
       "mlbId": 691907,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Turner Hill",
+      "mlbId": 806367,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
