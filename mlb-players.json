@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-15",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -728,7 +728,7 @@
       "name": "Ben Rice",
       "mlbId": 700250,
       "team": "",
-      "position": "1B",
+      "position": "DH",
       "active": true
     },
     {
@@ -1212,6 +1212,13 @@
       "mlbId": 656271,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Brock Rodden",
+      "mlbId": 801126,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
