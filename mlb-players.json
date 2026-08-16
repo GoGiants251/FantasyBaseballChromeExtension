@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-15",
+  "updatedAt": "2026-08-16",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2528,6 +2528,13 @@
       "mlbId": 695734,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Daz Cameron",
+      "mlbId": 663662,
+      "team": "",
+      "position": "RF",
       "active": true
     },
     {
@@ -5212,6 +5219,13 @@
       "active": true
     },
     {
+      "name": "Joshua Báez",
+      "mlbId": 695491,
+      "team": "",
+      "position": "RF",
+      "active": true
+    },
+    {
       "name": "Joshua Kuroda-Grauer",
       "mlbId": 811965,
       "team": "",
@@ -6549,6 +6563,13 @@
       "active": true
     },
     {
+      "name": "Michael Fulmer",
+      "mlbId": 605242,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Michael Grove",
       "mlbId": 675627,
       "team": "",
@@ -7589,6 +7610,13 @@
       "mlbId": 680700,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Ricky Tiedemann",
+      "mlbId": 694357,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
