@@ -295,7 +295,25 @@ function isRatingHistory(data) {
 function isRemoteDataStale(remoteData, bundledData) {
   const remoteDate = getGeneratedDataDate(remoteData);
   const bundledDate = getGeneratedDataDate(bundledData);
-  return Boolean(remoteDate && bundledDate && remoteDate < bundledDate);
+  const remoteModelVersion = getGeneratedDataModelVersion(remoteData);
+  const bundledModelVersion = getGeneratedDataModelVersion(bundledData);
+
+  // Fresh remote data must win even when the bundled extension was built with
+  // a newer scoring model. Rejecting the whole remote player file would also
+  // reject its current stats and game logs until that model reaches main.
+  if (remoteDate && bundledDate && remoteDate !== bundledDate) {
+    return remoteDate < bundledDate;
+  }
+
+  if (isOlderModelVersion(remoteModelVersion, bundledModelVersion)) {
+    return true;
+  }
+
+  if (isOlderModelVersion(bundledModelVersion, remoteModelVersion)) {
+    return false;
+  }
+
+  return false;
 }
 
 function getGeneratedDataDate(data) {
@@ -308,6 +326,33 @@ function getGeneratedDataDate(data) {
   }
 
   return "";
+}
+
+function getGeneratedDataModelVersion(data) {
+  if (data?.rating?.modelVersion) {
+    return data.rating.modelVersion;
+  }
+
+  if (Array.isArray(data)) {
+    return data.find((item) => item?.rating?.modelVersion)?.rating?.modelVersion || "";
+  }
+
+  return "";
+}
+
+function isOlderModelVersion(candidateVersion, referenceVersion) {
+  if (!candidateVersion || !referenceVersion || candidateVersion === referenceVersion) {
+    return false;
+  }
+
+  const candidateMatch = String(candidateVersion).match(/^(.*)-v(\d+)$/i);
+  const referenceMatch = String(referenceVersion).match(/^(.*)-v(\d+)$/i);
+
+  if (!candidateMatch || !referenceMatch || candidateMatch[1] !== referenceMatch[1]) {
+    return false;
+  }
+
+  return Number(candidateMatch[2]) < Number(referenceMatch[2]);
 }
 
 function buildDataSourceSummary(playersResult, mlbPlayerIndex, ratingHistory) {

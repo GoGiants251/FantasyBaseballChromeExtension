@@ -31,12 +31,14 @@ To stamp the generated data with a specific through date and use that as the rec
 node scripts/update-players.js --date 2026-05-03
 ```
 
+You can also pass `--season 2026` when refreshing or backfilling a season other than the one in `helper-config.json`.
+
 3. Go to `chrome://extensions`.
 4. Reload Fantasy Baseball Helper.
 5. Refresh the fantasy baseball page.
 6. Click the extension icon to open the side panel.
 
-The updater fetches MLB identity/current season stats and recent game logs from `statsapi.mlb.com`, imports Razzball/Steamer rest-of-season hitter and pitcher projection tables, imports Baseball Savant custom leaderboard CSV metrics, builds an explainable rest-of-season rating, generates deterministic decision notes, and rewrites `players.json`. Projection scores are ranked against fantasy-relevant players; hitter scores use a dynamic rest-of-season PA pool, based on the 60th percentile of projected hitter PA and clamped between 75 and 250 PA, plus a modest position scarcity adjustment. Final scores are weighted 60% rest-of-season projection and 40% current form.
+The updater fetches MLB identity/current season stats and recent game logs from `statsapi.mlb.com`, imports Razzball/Steamer rest-of-season hitter and pitcher projection tables, imports Baseball Savant custom leaderboard CSV metrics, builds an explainable rest-of-season rating, generates deterministic decision notes, and rewrites `players.json`. It then backfills any missing Monday rating-history points and validates both weekly continuity and projection-score health before completing. Projection scores are ranked against fantasy-relevant players; hitter scores use a dynamic rest-of-season PA pool, based on the 60th percentile of projected hitter PA and clamped between 75 and 250 PA, plus a modest position scarcity adjustment. Pitcher scores use a dynamic rest-of-season innings pool, based on the 35th percentile of projected pitcher IP and clamped between 5 and 40 IP, so the eligibility boundary shrinks with the remaining schedule. Final scores are weighted 60% rest-of-season projection and 40% current form.
 
 It also writes `mlb-players.json`, a local MLB name index that the extension uses to find visible untracked players on the fantasy page.
 
@@ -54,7 +56,7 @@ Backfilled weekly points use the current projection internally to estimate overa
 
 ## Automated Data Refresh
 
-The repo includes a GitHub Actions workflow at `.github/workflows/refresh-data.yml` that refreshes generated data daily at 12:00 UTC. The workflow calculates the refresh date in `America/Los_Angeles`, runs the deterministic updater, backfills Monday rating history through the same date, validates the generated JSON, and commits only:
+The repo includes a GitHub Actions workflow at `.github/workflows/refresh-data.yml` that refreshes generated data daily at 12:00 UTC. The workflow calculates the refresh date in `America/Los_Angeles`, runs the deterministic updater (including Monday-history backfill and validation), performs a separate pre-commit validation, and commits only:
 
 - `players.json`
 - `mlb-players.json`
@@ -65,7 +67,7 @@ The scheduled workflow intentionally does not update `manifest.json`. Data-only 
 
 You can run the workflow manually from GitHub Actions with an optional `refresh_date` and `season` override. Use `YYYY-MM-DD` for the date.
 
-The extension resolves the latest `main` commit through the GitHub API, loads JSON from public GitHub raw URLs pinned to that commit SHA, then falls back to the bundled JSON files if the remote request fails, times out, returns an unexpected shape, or is older than the bundled data. The current remote repository URLs are configured in `content.js`:
+The extension resolves the latest `main` commit through the GitHub API, loads JSON from public GitHub raw URLs pinned to that commit SHA, then falls back to the bundled JSON files if the remote request fails, times out, returns an unexpected shape, is older than the bundled data, or has the same data date but uses an older scoring-model version. A newer remote data date always wins so current stats and recent game logs do not freeze while a newer bundled scoring model is waiting to reach `main`. The current remote repository URLs are configured in `content.js`:
 
 ```js
 https://raw.githubusercontent.com/GoGiants251/FantasyBaseballChromeExtension/main

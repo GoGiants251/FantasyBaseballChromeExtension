@@ -62,17 +62,10 @@ jobs:
           echo "season=$SEASON" >> "$GITHUB_OUTPUT"
 
       - name: Refresh player data
-        run: node scripts/update-players.js --date "${{ steps.dates.outputs.refresh_date }}"
-
-      - name: Backfill weekly rating history
-        run: node scripts/backfill-rating-history.js --season "${{ steps.dates.outputs.season }}" --through "${{ steps.dates.outputs.refresh_date }}"
+        run: node scripts/update-players.js --date "${{ steps.dates.outputs.refresh_date }}" --season "${{ steps.dates.outputs.season }}"
 
       - name: Validate generated JSON
-        run: |
-          node -e 'JSON.parse(require("fs").readFileSync("players.json","utf8"))'
-          node -e 'JSON.parse(require("fs").readFileSync("mlb-players.json","utf8"))'
-          node -e 'JSON.parse(require("fs").readFileSync("data/generated/player-values.json","utf8"))'
-          node -e 'JSON.parse(require("fs").readFileSync("data/generated/rating-history.json","utf8"))'
+        run: node scripts/validate-generated-data.js --date "${{ steps.dates.outputs.refresh_date }}"
 
       - name: Commit generated data
         shell: bash

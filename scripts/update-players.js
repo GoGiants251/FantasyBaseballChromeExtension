@@ -7,6 +7,10 @@
 
 const fs = require("fs/promises");
 const path = require("path");
+const { execFile } = require("child_process");
+const { promisify } = require("util");
+
+const execFileAsync = promisify(execFile);
 
 const ROOT_DIR = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT_DIR, "helper-config.json");
@@ -15,11 +19,14 @@ const PLAYER_INDEX_PATH = path.join(ROOT_DIR, "mlb-players.json");
 const GENERATED_DIR = path.join(ROOT_DIR, "data", "generated");
 const PLAYER_VALUES_PATH = path.join(GENERATED_DIR, "player-values.json");
 const RATING_HISTORY_PATH = path.join(GENERATED_DIR, "rating-history.json");
+const BACKFILL_SCRIPT_PATH = path.join(__dirname, "backfill-rating-history.js");
+const VALIDATION_SCRIPT_PATH = path.join(__dirname, "validate-generated-data.js");
 const MLB_API_BASE = "https://statsapi.mlb.com/api/v1";
 const GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta";
 const RUN_AI_RECOMMENDATIONS = process.argv.includes("--ai");
 const AI_PLAYER_FILTER = getCliOption("--ai-player") || process.env.GEMINI_AI_PLAYER || "";
 const REQUESTED_UPDATE_DATE = getCliOption("--date") || process.env.FBH_UPDATE_DATE || "";
+const REQUESTED_SEASON = getCliOption("--season") || process.env.FBH_SEASON || "";
 const DECISION_ENGINE_VERSION = "decision-engine-v1";
 const RATING_PROJECTION_WEIGHT = 0.6;
 const RATING_CURRENT_FORM_WEIGHT = 0.4;
@@ -30,6 +37,9 @@ const RECENT_GAMES_OUTPUT_COUNT = 15;
 const HITTER_PROJECTION_POOL_PA_PERCENTILE = 0.6;
 const HITTER_PROJECTION_POOL_MIN_PA = 75;
 const HITTER_PROJECTION_POOL_MAX_PA = 250;
+const PITCHER_PROJECTION_POOL_IP_PERCENTILE = 0.35;
+const PITCHER_PROJECTION_POOL_MIN_IP = 5;
+const PITCHER_PROJECTION_POOL_MAX_IP = 40;
 const HITTER_SEASON_FORM_FULL_TRUST_PA = 150;
 const STARTER_SEASON_FORM_FULL_TRUST_IP = 40;
 const RELIEVER_SEASON_FORM_FULL_TRUST_IP = 15;
@@ -73,7 +83,7 @@ const AI_BADGE_TONES = new Set(["positive", "neutral", "caution", "risk"]);
 
 async function main() {
   const config = await readJson(CONFIG_PATH);
-  const season = config.season || new Date().getFullYear();
+  const season = Number(REQUESTED_SEASON) || config.season || new Date().getFullYear();
   const updatedAt = getUpdateDate();
 
   await fs.mkdir(GENERATED_DIR, { recursive: true });
@@ -137,6 +147,14 @@ async function main() {
   await fs.writeFile(PLAYER_VALUES_PATH, `${JSON.stringify(players, null, 2)}\n`);
   await fs.writeFile(RATING_HISTORY_PATH, `${JSON.stringify(ratingHistory, null, 2)}\n`);
 
+  await runNodeScript(BACKFILL_SCRIPT_PATH, [
+    "--season",
+    String(season),
+    "--through",
+    updatedAt
+  ]);
+  await runNodeScript(VALIDATION_SCRIPT_PATH, ["--date", updatedAt]);
+
   console.log(`Wrote ${players.length} projection-scored players to players.json`);
   console.log(
     `Wrote ${playerIndex.players.length} MLB names to ${path.relative(
@@ -147,6 +165,20 @@ async function main() {
   console.log(`Wrote values backup to ${path.relative(ROOT_DIR, PLAYER_VALUES_PATH)}`);
   console.log(`Wrote rating history to ${path.relative(ROOT_DIR, RATING_HISTORY_PATH)}`);
   printTopPlayers(players);
+}
+
+async function runNodeScript(scriptPath, args) {
+  const { stdout, stderr } = await execFileAsync(process.execPath, [scriptPath, ...args], {
+    cwd: ROOT_DIR,
+    maxBuffer: 10 * 1024 * 1024
+  });
+
+  if (stdout) {
+    process.stdout.write(stdout);
+  }
+  if (stderr) {
+    process.stderr.write(stderr);
+  }
 }
 
 async function updateRatingHistory(players, updatedAt) {
@@ -754,7 +786,11 @@ function getHitterPositionScarcityAdjustment(positions) {
 }
 
 function scorePitchers(pitchers) {
-  const eligible = pitchers.filter((player) => player.projected.inningsPitched >= 40);
+  const projectionPoolMinimumInningsPitched =
+    getDynamicPitcherProjectionPoolMinimumIp(pitchers);
+  const eligible = pitchers.filter((player) => {
+    return player.projected.inningsPitched >= projectionPoolMinimumInningsPitched;
+  });
   const metrics = {
     qualityStarts: getMeanAndStd(eligible.map((player) => player.projected.qualityStarts)),
     wins: getMeanAndStd(eligible.map((player) => player.projected.wins)),
@@ -786,12 +822,37 @@ function scorePitchers(pitchers) {
 
     return {
       ...player,
-      fantasyValue: round(rawValue, 2)
+      fantasyValue: round(rawValue, 2),
+      projectionPoolMinimumInningsPitched
     };
   });
 
-  const percentilePool = scored.filter((player) => player.projected.inningsPitched >= 40);
+  const percentilePool = scored.filter((player) => {
+    return player.projected.inningsPitched >= projectionPoolMinimumInningsPitched;
+  });
   return addPercentileScores(scored, percentilePool);
+}
+
+function getDynamicPitcherProjectionPoolMinimumIp(pitchers) {
+  const projectedInnings = pitchers
+    .map((player) => player.projected.inningsPitched)
+    .filter((inningsPitched) => Number.isFinite(inningsPitched) && inningsPitched > 0)
+    .sort((a, b) => a - b);
+
+  if (projectedInnings.length === 0) {
+    return PITCHER_PROJECTION_POOL_MAX_IP;
+  }
+
+  const percentileIndex = Math.floor(
+    (projectedInnings.length - 1) * PITCHER_PROJECTION_POOL_IP_PERCENTILE
+  );
+  const percentileInnings = projectedInnings[percentileIndex];
+
+  return clamp(
+    round(percentileInnings, 1),
+    PITCHER_PROJECTION_POOL_MIN_IP,
+    PITCHER_PROJECTION_POOL_MAX_IP
+  );
 }
 
 function addPercentileScores(players, percentilePool = players) {
@@ -889,7 +950,7 @@ function applyRatings(players) {
         "Rest-of-season projection weighted 60%; current form weighted 40%.",
         "Current form includes season form, recent games, and Savant skills."
       ],
-      modelVersion: "rest-of-season-blend-v2"
+      modelVersion: "rest-of-season-blend-v3"
     };
 
     return {
@@ -2481,6 +2542,8 @@ function buildPlayerRecord({
       positionAdjustment: projectionValue.positionAdjustment,
       projectionPoolMinimumPlateAppearances:
         projectionValue.projectionPoolMinimumPlateAppearances,
+      projectionPoolMinimumInningsPitched:
+        projectionValue.projectionPoolMinimumInningsPitched,
       percentileScore: projectionValue.score
     },
     recommendation: {

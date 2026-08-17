@@ -5534,6 +5534,13 @@
       "active": true
     },
     {
+      "name": "Kent Emanuel",
+      "mlbId": 592288,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Kerry Carpenter",
       "mlbId": 681481,
       "team": "",
@@ -6853,7 +6860,7 @@
       "name": "Myles Straw",
       "mlbId": 664702,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
