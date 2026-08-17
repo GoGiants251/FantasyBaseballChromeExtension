@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-17",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1135,6 +1135,13 @@
       "mlbId": 683146,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Brett Callahan",
+      "mlbId": 814430,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -7531,6 +7538,13 @@
     {
       "name": "Ranger Suarez",
       "mlbId": 624133,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Ray Kerr",
+      "mlbId": 678061,
       "team": "",
       "position": "P",
       "active": true
