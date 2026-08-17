@@ -1785,12 +1785,72 @@ function getFantasyStatsTableRow(label, player, sourceKey) {
     label,
     `${roundDisplay(data.hits)}/${roundDisplay(data.atBats)}`,
     shouldRound ? roundDisplay(data.runs) : data.runs || 0,
-    shouldRound ? roundDisplay(data.homeRuns) : data.homeRuns || 0,
+    shouldRound
+      ? roundDisplay(data.homeRuns)
+      : createHomeRunVideoLink(player, data.homeRuns || 0),
     shouldRound ? roundDisplay(data.rbi) : data.rbi || 0,
     shouldRound ? roundDisplay(data.stolenBases) : data.stolenBases || 0,
     formatAverage(data.avg),
     formatAverage(data.ops)
   ];
+}
+
+function createHomeRunVideoLink(player, homeRuns, gameDate = "") {
+  const mlbId = Number(player.mlbId);
+  const season = Number(player.source?.season || player.savant?.season);
+
+  if (!Number.isInteger(mlbId) || !Number.isInteger(season)) {
+    return homeRuns;
+  }
+
+  const filmRoomDate = gameDate ? getFilmRoomDate(gameDate, season) : "";
+  if (gameDate && !filmRoomDate) {
+    return homeRuns;
+  }
+
+  const query =
+    `BatterId = [${mlbId}] AND HitResult = ["Home Run"] ` +
+    `AND GameType = ["REGULAR_SEASON"] AND Season = [${season}] ` +
+    (filmRoomDate ? `AND Date = ["${filmRoomDate}"] ` : "") +
+    "Order By Timestamp DESC";
+  const link = document.createElement("a");
+  link.className = "fbh-film-room-link";
+  link.href =
+    `https://www.mlb.com/video/?q=${encodeURIComponent(query).replace(/%20/g, "+")}` +
+    (filmRoomDate ? "&of=1" : "");
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = homeRuns;
+  link.setAttribute(
+    "aria-label",
+    filmRoomDate
+      ? `Watch ${player.name}'s home runs from ${gameDate} in MLB Film Room`
+      : `Watch ${player.name}'s ${season} home runs in MLB Film Room`
+  );
+  link.title = filmRoomDate
+    ? `Watch home runs from ${gameDate} in MLB Film Room`
+    : "Watch home runs in MLB Film Room";
+  return link;
+}
+
+function getFilmRoomDate(gameDate, season) {
+  const isoDate = String(gameDate || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (isoDate) {
+    return isoDate[1] === String(season) ? isoDate[0] : "";
+  }
+
+  const shortDate = String(gameDate || "").match(/^(\d{1,2})\/(\d{1,2})$/);
+  if (!shortDate) {
+    return "";
+  }
+
+  const month = Number(shortDate[1]);
+  const day = Number(shortDate[2]);
+  if (month < 1 || month > 12 || day < 1 || day > 31) {
+    return "";
+  }
+
+  return `${season}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
 function createRecentGamesSection(player) {
@@ -1872,7 +1932,9 @@ function createRecentGamesTable(player, games) {
       game.opponent,
       `${game.hits}/${game.atBats}`,
       game.runs,
-      game.homeRuns,
+      Number(game.homeRuns) > 0
+        ? createHomeRunVideoLink(player, game.homeRuns, game.date)
+        : game.homeRuns || 0,
       game.rbi,
       game.stolenBases,
       game.avg,
@@ -2124,7 +2186,11 @@ function createTableBody(rows) {
     const row = document.createElement("tr");
     rowValues.forEach((value) => {
       const cell = document.createElement("td");
-      cell.textContent = value;
+      if (value instanceof Node) {
+        cell.appendChild(value);
+      } else {
+        cell.textContent = value;
+      }
       row.appendChild(cell);
     });
     tbody.appendChild(row);

@@ -1043,6 +1043,13 @@
   color: #6b7280;
 }
 
+.fbh-film-room-link {
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+
 .fbh-stats-table tfoot td {
   border-top: 2px solid #cbd5e1;
   background: #f8fafc;
