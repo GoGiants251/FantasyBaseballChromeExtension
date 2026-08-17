@@ -1899,6 +1899,7 @@ function getRecentGamesTotalsRow(player, games) {
         return {
           inningsPitched: sum.inningsPitched + inningsPitched,
           earnedRuns: sum.earnedRuns + Number(game.earnedRuns || 0),
+          hits: sum.hits + Number(game.hits || 0),
           strikeOuts: sum.strikeOuts + Number(game.strikeOuts || 0),
           baseOnBalls: sum.baseOnBalls + Number(game.baseOnBalls || 0),
           qualityStarts: sum.qualityStarts + (game.qualityStart ? 1 : 0),
@@ -1915,6 +1916,7 @@ function getRecentGamesTotalsRow(player, games) {
         wins: 0,
         saves: 0,
         earnedRuns: 0,
+        hits: 0,
         baserunners: 0
       }
     );
@@ -2029,6 +2031,11 @@ function getPitchingGameLogColumns(player) {
       header: "ER",
       getValue: (game) => game.earnedRuns || 0,
       getTotalValue: (totals) => totals.earnedRuns
+    },
+    {
+      header: "H",
+      getValue: (game) => game.hits || 0,
+      getTotalValue: (totals) => totals.hits
     },
     {
       header: "K",

@@ -2694,6 +2694,7 @@ function normalizeRecentGames(splits, group) {
           wins: toNumber(stat.wins),
           saves: toNumber(stat.saves),
           earnedRuns: toNumber(stat.earnedRuns),
+          hits: toNumber(stat.hits),
           era: getGameEra(stat),
           whip: getGameWhip(stat)
         };
