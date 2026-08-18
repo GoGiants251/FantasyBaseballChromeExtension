@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-17",
+  "updatedAt": "2026-08-18",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5380,6 +5380,13 @@
       "active": true
     },
     {
+      "name": "Justin Martinez",
+      "mlbId": 679885,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Justin Slaten",
       "mlbId": 686580,
       "team": "",
@@ -5565,7 +5572,7 @@
       "name": "Kevin Alcántara",
       "mlbId": 682634,
       "team": "",
-      "position": "DH",
+      "position": "OF",
       "active": true
     },
     {
@@ -7239,6 +7246,13 @@
       "mlbId": 683357,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Owen Miller",
+      "mlbId": 680911,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
@@ -9428,6 +9442,13 @@
     {
       "name": "Wyatt Mills",
       "mlbId": 670090,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Wyatt Olds",
+      "mlbId": 681544,
       "team": "",
       "position": "P",
       "active": true
