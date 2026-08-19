@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-18",
+  "updatedAt": "2026-08-19",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1579,6 +1579,13 @@
       "active": true
     },
     {
+      "name": "Carlos Duran",
+      "mlbId": 679922,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Carlos Estévez",
       "mlbId": 608032,
       "team": "",
@@ -2226,7 +2233,7 @@
       "name": "Connor Norby",
       "mlbId": 681393,
       "team": "",
-      "position": "1B",
+      "position": "2B",
       "active": true
     },
     {
@@ -5572,7 +5579,7 @@
       "name": "Kevin Alcántara",
       "mlbId": 682634,
       "team": "",
-      "position": "OF",
+      "position": "DH",
       "active": true
     },
     {
@@ -8680,7 +8687,7 @@
       "name": "Tim Tawa",
       "mlbId": 694374,
       "team": "",
-      "position": "LF",
+      "position": "1B",
       "active": true
     },
     {
@@ -9311,6 +9318,13 @@
       "mlbId": 678576,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Will Banfield",
+      "mlbId": 677943,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
