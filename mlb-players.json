@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-20",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1075,6 +1075,13 @@
       "active": true
     },
     {
+      "name": "Brendan Cellucci",
+      "mlbId": 676454,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Brendan Donovan",
       "mlbId": 680977,
       "team": "",
@@ -1393,7 +1400,7 @@
       "name": "Buddy Kennedy",
       "mlbId": 671083,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
@@ -3105,6 +3112,13 @@
       "active": true
     },
     {
+      "name": "Erik Tolman",
+      "mlbId": 680899,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Ernie Clement",
       "mlbId": 676391,
       "team": "",
@@ -3123,6 +3137,13 @@
       "mlbId": 665923,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Ethan Pecko",
+      "mlbId": 814490,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -4528,6 +4549,13 @@
     {
       "name": "Jhoan Duran",
       "mlbId": 661395,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jhonathan Díaz",
+      "mlbId": 646242,
       "team": "",
       "position": "P",
       "active": true
@@ -6290,6 +6318,13 @@
       "active": true
     },
     {
+      "name": "Mark Manfredi",
+      "mlbId": 815081,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Mark Vientos",
       "mlbId": 668901,
       "team": "",
@@ -6462,6 +6497,13 @@
       "mlbId": 670242,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Matt Wilkinson",
+      "mlbId": 683363,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -6853,7 +6895,7 @@
       "name": "Moisés Ballesteros",
       "mlbId": 694208,
       "team": "",
-      "position": "C",
+      "position": "DH",
       "active": true
     },
     {
