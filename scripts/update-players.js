@@ -23,6 +23,9 @@ const BACKFILL_SCRIPT_PATH = path.join(__dirname, "backfill-rating-history.js");
 const VALIDATION_SCRIPT_PATH = path.join(__dirname, "validate-generated-data.js");
 const MLB_API_BASE = "https://statsapi.mlb.com/api/v1";
 const GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta";
+const FETCH_MAX_ATTEMPTS = 4;
+const FETCH_RETRY_BASE_DELAY_MS = 1000;
+const RETRYABLE_HTTP_STATUSES = new Set([408, 425, 429, 500, 502, 503, 504]);
 const RUN_AI_RECOMMENDATIONS = process.argv.includes("--ai");
 const AI_PLAYER_FILTER = getCliOption("--ai-player") || process.env.GEMINI_AI_PLAYER || "";
 const REQUESTED_UPDATE_DATE = getCliOption("--date") || process.env.FBH_UPDATE_DATE || "";
@@ -2774,23 +2777,53 @@ async function readJson(filePath) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(`Request failed ${response.status}: ${url}`);
-  }
-
+  const response = await fetchWithRetry(url);
   return response.json();
 }
 
 async function fetchText(url) {
-  const response = await fetch(url);
+  const response = await fetchWithRetry(url);
+  return response.text();
+}
 
-  if (!response.ok) {
-    throw new Error(`Request failed ${response.status}: ${url}`);
+async function fetchWithRetry(url) {
+  for (let attempt = 1; attempt <= FETCH_MAX_ATTEMPTS; attempt += 1) {
+    let response;
+
+    try {
+      response = await fetch(url);
+    } catch (error) {
+      if (attempt === FETCH_MAX_ATTEMPTS) {
+        throw error;
+      }
+
+      await waitBeforeFetchRetry(url, attempt, error.message || "network error");
+      continue;
+    }
+
+    if (response.ok) {
+      return response;
+    }
+
+    const error = new Error(`Request failed ${response.status}: ${url}`);
+    if (!RETRYABLE_HTTP_STATUSES.has(response.status) || attempt === FETCH_MAX_ATTEMPTS) {
+      throw error;
+    }
+
+    await response.body?.cancel();
+    await waitBeforeFetchRetry(url, attempt, `HTTP ${response.status}`);
   }
 
-  return response.text();
+  throw new Error(`Request failed after ${FETCH_MAX_ATTEMPTS} attempts: ${url}`);
+}
+
+async function waitBeforeFetchRetry(url, attempt, reason) {
+  const delayMs = FETCH_RETRY_BASE_DELAY_MS * 2 ** (attempt - 1);
+  console.warn(
+    `Request failed (${reason}); retrying in ${delayMs}ms ` +
+      `(attempt ${attempt + 1}/${FETCH_MAX_ATTEMPTS}): ${url}`
+  );
+  await new Promise((resolve) => setTimeout(resolve, delayMs));
 }
 
 function parseCsv(csv) {

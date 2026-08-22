@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1075,13 +1075,6 @@
       "active": true
     },
     {
-      "name": "Brendan Cellucci",
-      "mlbId": 676454,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
       "name": "Brendan Donovan",
       "mlbId": 680977,
       "team": "",
@@ -1232,7 +1225,7 @@
       "name": "Brock Rodden",
       "mlbId": 801126,
       "team": "",
-      "position": "2B",
+      "position": "SS",
       "active": true
     },
     {
@@ -1625,6 +1618,13 @@
       "mlbId": 467793,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Carlos Vargas",
+      "mlbId": 672841,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -2905,7 +2905,7 @@
       "name": "Eduardo Valencia",
       "mlbId": 680664,
       "team": "",
-      "position": "C",
+      "position": "DH",
       "active": true
     },
     {
@@ -5887,7 +5887,7 @@
       "name": "Lane Thomas",
       "mlbId": 657041,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -5951,6 +5951,13 @@
       "mlbId": 671106,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Logan Driscoll",
+      "mlbId": 686482,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -6518,6 +6525,13 @@
       "mlbId": 669461,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Matthew Lugo",
+      "mlbId": 683090,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -8442,7 +8456,7 @@
       "name": "Spencer Jones",
       "mlbId": 682987,
       "team": "",
-      "position": "CF",
+      "position": "RF",
       "active": true
     },
     {
@@ -8673,7 +8687,7 @@
       "name": "Taylor Ward",
       "mlbId": 621493,
       "team": "",
-      "position": "LF",
+      "position": "DH",
       "active": true
     },
     {

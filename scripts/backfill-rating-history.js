@@ -15,6 +15,9 @@ const PLAYERS_PATH = path.join(ROOT_DIR, "players.json");
 const GENERATED_DIR = path.join(ROOT_DIR, "data", "generated");
 const RATING_HISTORY_PATH = path.join(GENERATED_DIR, "rating-history.json");
 const MLB_API_BASE = "https://statsapi.mlb.com/api/v1";
+const FETCH_MAX_ATTEMPTS = 4;
+const FETCH_RETRY_BASE_DELAY_MS = 1000;
+const RETRYABLE_HTTP_STATUSES = new Set([408, 425, 429, 500, 502, 503, 504]);
 const RATING_PROJECTION_WEIGHT = 0.6;
 const RATING_CURRENT_FORM_WEIGHT = 0.4;
 const HITTER_RECENT_TREND_GAME_COUNT = 7;
@@ -84,7 +87,7 @@ async function fetchSeasonGameLogs(players, season, startDate, endDate) {
           .map((player) => player.mlbId)
       )
     );
-    const chunks = chunkArray(ids, 75);
+    const chunks = chunkArray(ids, 25);
 
     for (const chunk of chunks) {
       const people = await fetchPeopleGameLogChunk(chunk, group.statsGroup, season, startDate, endDate);
@@ -893,23 +896,53 @@ async function readJson(filePath) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(`Request failed ${response.status}: ${url}`);
-  }
-
+  const response = await fetchWithRetry(url);
   return response.json();
 }
 
 async function fetchText(url) {
-  const response = await fetch(url);
+  const response = await fetchWithRetry(url);
+  return response.text();
+}
 
-  if (!response.ok) {
-    throw new Error(`Request failed ${response.status}: ${url}`);
+async function fetchWithRetry(url) {
+  for (let attempt = 1; attempt <= FETCH_MAX_ATTEMPTS; attempt += 1) {
+    let response;
+
+    try {
+      response = await fetch(url);
+    } catch (error) {
+      if (attempt === FETCH_MAX_ATTEMPTS) {
+        throw error;
+      }
+
+      await waitBeforeFetchRetry(url, attempt, error.message || "network error");
+      continue;
+    }
+
+    if (response.ok) {
+      return response;
+    }
+
+    const error = new Error(`Request failed ${response.status}: ${url}`);
+    if (!RETRYABLE_HTTP_STATUSES.has(response.status) || attempt === FETCH_MAX_ATTEMPTS) {
+      throw error;
+    }
+
+    await response.body?.cancel();
+    await waitBeforeFetchRetry(url, attempt, `HTTP ${response.status}`);
   }
 
-  return response.text();
+  throw new Error(`Request failed after ${FETCH_MAX_ATTEMPTS} attempts: ${url}`);
+}
+
+async function waitBeforeFetchRetry(url, attempt, reason) {
+  const delayMs = FETCH_RETRY_BASE_DELAY_MS * 2 ** (attempt - 1);
+  console.warn(
+    `Request failed (${reason}); retrying in ${delayMs}ms ` +
+      `(attempt ${attempt + 1}/${FETCH_MAX_ATTEMPTS}): ${url}`
+  );
+  await new Promise((resolve) => setTimeout(resolve, delayMs));
 }
 
 function getMeanAndStd(values) {
