@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2611,7 +2611,7 @@
       "name": "Deyvison De Los Santos",
       "mlbId": 691277,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
@@ -3648,6 +3648,13 @@
       "mlbId": 681402,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Gustavo Campero",
+      "mlbId": 672569,
+      "team": "",
+      "position": "OF",
       "active": true
     },
     {
@@ -5457,6 +5464,13 @@
       "active": true
     },
     {
+      "name": "Kade Anderson",
+      "mlbId": 807739,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Kade Morris",
       "mlbId": 695034,
       "team": "",
@@ -5951,13 +5965,6 @@
       "mlbId": 671106,
       "team": "",
       "position": "P",
-      "active": true
-    },
-    {
-      "name": "Logan Driscoll",
-      "mlbId": 686482,
-      "team": "",
-      "position": "C",
       "active": true
     },
     {
