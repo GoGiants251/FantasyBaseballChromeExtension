@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -6385,6 +6385,13 @@
       "mlbId": 807799,
       "team": "",
       "position": "DH",
+      "active": true
+    },
+    {
+      "name": "Mason Adams",
+      "mlbId": 690279,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
