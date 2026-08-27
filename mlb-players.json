@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -524,6 +524,13 @@
     {
       "name": "Anthony Bender",
       "mlbId": 669622,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Anthony Gose",
+      "mlbId": 543238,
       "team": "",
       "position": "P",
       "active": true
@@ -1054,6 +1061,13 @@
       "active": true
     },
     {
+      "name": "Braxton Roxby",
+      "mlbId": 694820,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Brayan Bello",
       "mlbId": 678394,
       "team": "",
@@ -1455,6 +1469,13 @@
     {
       "name": "Cade Smith",
       "mlbId": 671922,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Cade Winquest",
+      "mlbId": 685464,
       "team": "",
       "position": "P",
       "active": true
@@ -4984,7 +5005,7 @@
       "name": "Jordan Lawlar",
       "mlbId": 691783,
       "team": "",
-      "position": "LF",
+      "position": "CF",
       "active": true
     },
     {
@@ -6178,6 +6199,13 @@
       "active": true
     },
     {
+      "name": "Luis Perales",
+      "mlbId": 691384,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Luis Rengifo",
       "mlbId": 650859,
       "team": "",
@@ -6210,6 +6238,13 @@
       "mlbId": 649966,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Luis Vázquez",
+      "mlbId": 676679,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -7412,6 +7447,13 @@
     {
       "name": "Patrick Corbin",
       "mlbId": 571578,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Patrick Monteverde",
+      "mlbId": 687287,
       "team": "",
       "position": "P",
       "active": true
@@ -9058,7 +9100,7 @@
       "name": "Turner Hill",
       "mlbId": 806367,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -9800,7 +9842,7 @@
       "name": "Zach McKinstry",
       "mlbId": 656716,
       "team": "",
-      "position": "2B",
+      "position": "RF",
       "active": true
     },
     {
