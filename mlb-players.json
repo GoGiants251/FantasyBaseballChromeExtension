@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-28",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5950,7 +5950,7 @@
       "name": "Lars Nootbaar",
       "mlbId": 663457,
       "team": "",
-      "position": "LF",
+      "position": "DH",
       "active": true
     },
     {
@@ -9416,6 +9416,13 @@
       "mlbId": 621111,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Walker Jenkins",
+      "mlbId": 805805,
+      "team": "",
+      "position": "CF",
       "active": true
     },
     {
