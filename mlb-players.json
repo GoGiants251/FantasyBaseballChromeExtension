@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-29",
+  "updatedAt": "2026-08-30",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2590,7 +2590,7 @@
       "name": "Daz Cameron",
       "mlbId": 663662,
       "team": "",
-      "position": "RF",
+      "position": "LF",
       "active": true
     },
     {
@@ -2633,6 +2633,13 @@
       "mlbId": 656537,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Derek Law",
+      "mlbId": 571882,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -8397,6 +8404,13 @@
       "active": true
     },
     {
+      "name": "Seth Lonsway",
+      "mlbId": 675920,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Seth Lugo",
       "mlbId": 607625,
       "team": "",
@@ -9757,6 +9771,13 @@
     {
       "name": "Yuki Matsui",
       "mlbId": 673513,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Yunior Marte",
+      "mlbId": 805074,
       "team": "",
       "position": "P",
       "active": true
