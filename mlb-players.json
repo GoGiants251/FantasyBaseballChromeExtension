@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-01",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -140,7 +140,7 @@
       "name": "Agustín Ramírez",
       "mlbId": 682663,
       "team": "",
-      "position": "C",
+      "position": "DH",
       "active": true
     },
     {
@@ -753,6 +753,13 @@
       "active": true
     },
     {
+      "name": "Ben Ross",
+      "mlbId": 805346,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Ben Williamson",
       "mlbId": 810938,
       "team": "",
@@ -783,6 +790,13 @@
     {
       "name": "Blake Adams",
       "mlbId": 687060,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Blake Burkhalter",
+      "mlbId": 686628,
       "team": "",
       "position": "P",
       "active": true
@@ -902,6 +916,13 @@
     {
       "name": "Bradgley Rodriguez",
       "mlbId": 699134,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Bradley Blalock",
+      "mlbId": 687134,
       "team": "",
       "position": "P",
       "active": true
@@ -3196,6 +3217,13 @@
       "active": true
     },
     {
+      "name": "Ethan Salas",
+      "mlbId": 806956,
+      "team": "",
+      "position": "C",
+      "active": true
+    },
+    {
       "name": "Eugenio Suárez",
       "mlbId": 553993,
       "team": "",
@@ -3709,6 +3737,13 @@
     {
       "name": "Hagen Smith",
       "mlbId": 696146,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Hancel Rincon",
+      "mlbId": 684516,
       "team": "",
       "position": "P",
       "active": true
@@ -4386,6 +4421,13 @@
       "active": true
     },
     {
+      "name": "Jared Serna",
+      "mlbId": 691858,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
       "name": "Jared Shuster",
       "mlbId": 694363,
       "team": "",
@@ -4852,6 +4894,13 @@
       "mlbId": 804619,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "John Peck",
+      "mlbId": 807726,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
@@ -5979,6 +6028,13 @@
       "mlbId": 672820,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Leo Bernal",
+      "mlbId": 699024,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -8905,7 +8961,7 @@
       "mlbId": 502054,
       "team": "",
       "position": "LF",
-      "active": true
+      "active": false
     },
     {
       "name": "Tommy Troy",
@@ -9465,13 +9521,6 @@
       "mlbId": 642215,
       "team": "",
       "position": "3B",
-      "active": true
-    },
-    {
-      "name": "Wikelman González",
-      "mlbId": 682790,
-      "team": "",
-      "position": "P",
       "active": true
     },
     {
