@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-02",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -781,6 +781,13 @@
       "active": true
     },
     {
+      "name": "BJ Murray Jr.",
+      "mlbId": 681230,
+      "team": "",
+      "position": "3B",
+      "active": true
+    },
+    {
       "name": "Blade Tidwell",
       "mlbId": 694918,
       "team": "",
@@ -832,6 +839,13 @@
     {
       "name": "Blake Treinen",
       "mlbId": 595014,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Blake Walston",
+      "mlbId": 686796,
       "team": "",
       "position": "P",
       "active": true
@@ -1649,6 +1663,13 @@
       "active": true
     },
     {
+      "name": "Carlos Hernández",
+      "mlbId": 672578,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Carlos Narváez",
       "mlbId": 665966,
       "team": "",
@@ -1779,6 +1800,13 @@
       "mlbId": 656775,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Cesar Perdomo",
+      "mlbId": 702885,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -1961,6 +1989,13 @@
       "mlbId": 519242,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Christian Bethancourt",
+      "mlbId": 542194,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
@@ -2811,6 +2846,13 @@
       "active": true
     },
     {
+      "name": "Drew Waters",
+      "mlbId": 671221,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
       "name": "Drey Jameson",
       "mlbId": 686753,
       "team": "",
@@ -2842,7 +2884,7 @@
       "name": "Dylan Beavers",
       "mlbId": 687637,
       "team": "",
-      "position": "RF",
+      "position": "LF",
       "active": true
     },
     {
@@ -2885,6 +2927,13 @@
       "mlbId": 664238,
       "team": "",
       "position": "CF",
+      "active": true
+    },
+    {
+      "name": "Dylan Ross",
+      "mlbId": 697811,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -3616,6 +3665,13 @@
       "active": true
     },
     {
+      "name": "Grant Holman",
+      "mlbId": 680880,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Grant Holmes",
       "mlbId": 656550,
       "team": "",
@@ -3821,6 +3877,13 @@
     {
       "name": "Heriberto Hernández",
       "mlbId": 681715,
+      "team": "",
+      "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Heston Kjerstad",
+      "mlbId": 677008,
       "team": "",
       "position": "LF",
       "active": true
@@ -4430,6 +4493,13 @@
     {
       "name": "Jared Shuster",
       "mlbId": 694363,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jared Simpson",
+      "mlbId": 688692,
       "team": "",
       "position": "P",
       "active": true
@@ -5782,7 +5852,7 @@
       "name": "Kody Clemens",
       "mlbId": 665019,
       "team": "",
-      "position": "1B",
+      "position": "2B",
       "active": true
     },
     {
@@ -5961,6 +6031,13 @@
       "active": true
     },
     {
+      "name": "Kyren Paris",
+      "mlbId": 677347,
+      "team": "",
+      "position": "2B",
+      "active": true
+    },
+    {
       "name": "Lake Bachar",
       "mlbId": 669199,
       "team": "",
@@ -6021,6 +6098,13 @@
       "mlbId": 681751,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Lazaro Montes",
+      "mlbId": 703155,
+      "team": "",
+      "position": "RF",
       "active": true
     },
     {
@@ -6090,7 +6174,7 @@
       "name": "Logan O'Hoppe",
       "mlbId": 681351,
       "team": "",
-      "position": "C",
+      "position": "DH",
       "active": true
     },
     {
@@ -6194,6 +6278,13 @@
     {
       "name": "Luis Curvelo",
       "mlbId": 681168,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Luis De León",
+      "mlbId": 801725,
       "team": "",
       "position": "P",
       "active": true
@@ -8961,7 +9052,7 @@
       "mlbId": 502054,
       "team": "",
       "position": "LF",
-      "active": false
+      "active": true
     },
     {
       "name": "Tommy Troy",
@@ -9783,6 +9874,13 @@
       "active": true
     },
     {
+      "name": "Yohandy Morales",
+      "mlbId": 691002,
+      "team": "",
+      "position": "1B",
+      "active": true
+    },
+    {
       "name": "Yohel Pozo",
       "mlbId": 650968,
       "team": "",
@@ -9927,6 +10025,13 @@
       "mlbId": 656716,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Zach Morgan",
+      "mlbId": 681439,
+      "team": "",
+      "position": "C",
       "active": true
     },
     {
