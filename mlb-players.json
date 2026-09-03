@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2846,13 +2846,6 @@
       "active": true
     },
     {
-      "name": "Drew Waters",
-      "mlbId": 671221,
-      "team": "",
-      "position": "LF",
-      "active": true
-    },
-    {
       "name": "Drey Jameson",
       "mlbId": 686753,
       "team": "",
@@ -5580,6 +5573,13 @@
       "mlbId": 679822,
       "team": "",
       "position": "2B",
+      "active": true
+    },
+    {
+      "name": "Justin Hagenman",
+      "mlbId": 663795,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
