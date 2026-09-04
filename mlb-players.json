@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-04",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -624,6 +624,13 @@
       "mlbId": 668885,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "Austin Peterson",
+      "mlbId": 804926,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -3150,7 +3157,7 @@
       "name": "Enrique Hernández",
       "mlbId": 571771,
       "team": "",
-      "position": "1B",
+      "position": "3B",
       "active": true
     },
     {
