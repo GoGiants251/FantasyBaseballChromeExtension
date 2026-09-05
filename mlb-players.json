@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1677,6 +1677,13 @@
       "active": true
     },
     {
+      "name": "Carlos Jorge",
+      "mlbId": 699115,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Carlos Narváez",
       "mlbId": 665966,
       "team": "",
@@ -1996,13 +2003,6 @@
       "mlbId": 519242,
       "team": "",
       "position": "P",
-      "active": true
-    },
-    {
-      "name": "Christian Bethancourt",
-      "mlbId": 542194,
-      "team": "",
-      "position": "C",
       "active": true
     },
     {
@@ -4164,6 +4164,13 @@
     {
       "name": "Jack Ralston",
       "mlbId": 667652,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Jack Sinclair",
+      "mlbId": 695378,
       "team": "",
       "position": "P",
       "active": true
@@ -9253,6 +9260,13 @@
     {
       "name": "Troy Melton",
       "mlbId": 675512,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Troy Taylor",
+      "mlbId": 700187,
       "team": "",
       "position": "P",
       "active": true
