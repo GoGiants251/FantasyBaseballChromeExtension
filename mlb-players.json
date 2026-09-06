@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-06",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -897,6 +897,13 @@
       "mlbId": 666310,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "Bobby Miller",
+      "mlbId": 676272,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -8932,7 +8939,7 @@
       "name": "Taylor Trammell",
       "mlbId": 666211,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -9300,6 +9307,13 @@
       "active": true
     },
     {
+      "name": "Ty Johnson",
+      "mlbId": 694494,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Ty Madden",
       "mlbId": 680744,
       "team": "",
@@ -9554,6 +9568,13 @@
     {
       "name": "Vidal Bruján",
       "mlbId": 660644,
+      "team": "",
+      "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Vimael Machín",
+      "mlbId": 605353,
       "team": "",
       "position": "SS",
       "active": true
