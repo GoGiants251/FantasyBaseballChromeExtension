@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-06",
+  "updatedAt": "2026-09-07",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2386,6 +2386,13 @@
     {
       "name": "Cooper Criswell",
       "mlbId": 681867,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Cooper Hjerpe",
+      "mlbId": 687309,
       "team": "",
       "position": "P",
       "active": true
@@ -6882,6 +6889,13 @@
       "mlbId": 518876,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Michael Arroyo",
+      "mlbId": 703197,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
