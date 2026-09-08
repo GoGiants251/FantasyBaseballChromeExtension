@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -7210,7 +7210,7 @@
       "name": "Nate Eaton",
       "mlbId": 681987,
       "team": "",
-      "position": "OF",
+      "position": "LF",
       "active": true
     },
     {
