@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-09",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2030,7 +2030,7 @@
       "name": "Christian Koss",
       "mlbId": 683766,
       "team": "",
-      "position": "3B",
+      "position": "SS",
       "active": true
     },
     {
@@ -2409,6 +2409,13 @@
       "mlbId": 806198,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Corbin Burnes",
+      "mlbId": 669203,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -3073,7 +3080,7 @@
       "name": "Eli White",
       "mlbId": 642201,
       "team": "",
-      "position": "RF",
+      "position": "CF",
       "active": true
     },
     {
@@ -9286,13 +9293,6 @@
       "active": true
     },
     {
-      "name": "Troy Taylor",
-      "mlbId": 700187,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
       "name": "Tsung-Che Cheng",
       "mlbId": 691907,
       "team": "",
@@ -10081,13 +10081,6 @@
       "mlbId": 656716,
       "team": "",
       "position": "RF",
-      "active": true
-    },
-    {
-      "name": "Zach Morgan",
-      "mlbId": 681439,
-      "team": "",
-      "position": "C",
       "active": true
     },
     {
