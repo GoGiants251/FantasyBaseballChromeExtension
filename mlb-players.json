@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-11",
+  "updatedAt": "2026-09-12",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -3161,6 +3161,13 @@
       "active": true
     },
     {
+      "name": "Emmanuel Rodriguez",
+      "mlbId": 691181,
+      "team": "",
+      "position": "CF",
+      "active": true
+    },
+    {
       "name": "Emmet Sheehan",
       "mlbId": 686218,
       "team": "",
@@ -5485,6 +5492,13 @@
       "active": true
     },
     {
+      "name": "Josue De Paula",
+      "mlbId": 800543,
+      "team": "",
+      "position": "RF",
+      "active": true
+    },
+    {
       "name": "Jovani Morán",
       "mlbId": 663558,
       "team": "",
@@ -6651,6 +6665,13 @@
       "mlbId": 689254,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Mason McCoy",
+      "mlbId": 669200,
+      "team": "",
+      "position": "2B",
       "active": true
     },
     {
@@ -8198,6 +8219,13 @@
       "mlbId": 668904,
       "team": "",
       "position": "1B",
+      "active": true
+    },
+    {
+      "name": "Rudy Martin Jr.",
+      "mlbId": 657675,
+      "team": "",
+      "position": "RF",
       "active": true
     },
     {
