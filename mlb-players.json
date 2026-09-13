@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-12",
+  "updatedAt": "2026-09-13",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -609,7 +609,7 @@
       "name": "Austin Hays",
       "mlbId": 669720,
       "team": "",
-      "position": "LF",
+      "position": "DH",
       "active": true
     },
     {
@@ -1308,6 +1308,13 @@
     {
       "name": "Brock Stewart",
       "mlbId": 592779,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Brody Hopkins",
+      "mlbId": 811315,
       "team": "",
       "position": "P",
       "active": true
@@ -5355,7 +5362,7 @@
       "name": "Jose Siri",
       "mlbId": 642350,
       "team": "",
-      "position": "CF",
+      "position": "LF",
       "active": true
     },
     {
@@ -9562,7 +9569,7 @@
       "name": "Vaughn Grissom",
       "mlbId": 687093,
       "team": "",
-      "position": "2B",
+      "position": "1B",
       "active": true
     },
     {
