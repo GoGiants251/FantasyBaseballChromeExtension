@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-14",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -8534,6 +8534,13 @@
       "mlbId": 669289,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Scott Bandura",
+      "mlbId": 814154,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
