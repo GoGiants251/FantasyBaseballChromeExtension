@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-14",
+  "updatedAt": "2026-09-15",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1147,6 +1147,13 @@
     {
       "name": "Brendan Beck",
       "mlbId": 694341,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Brendan Cellucci",
+      "mlbId": 676454,
       "team": "",
       "position": "P",
       "active": true
@@ -6672,13 +6679,6 @@
       "mlbId": 689254,
       "team": "",
       "position": "P",
-      "active": true
-    },
-    {
-      "name": "Mason McCoy",
-      "mlbId": 669200,
-      "team": "",
-      "position": "2B",
       "active": true
     },
     {
