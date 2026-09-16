@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-16",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -2132,6 +2132,13 @@
       "active": true
     },
     {
+      "name": "Clarke Schmidt",
+      "mlbId": 657376,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Clay Holmes",
       "mlbId": 605280,
       "team": "",
@@ -2758,7 +2765,7 @@
       "name": "Deyvison De Los Santos",
       "mlbId": 691277,
       "team": "",
-      "position": "3B",
+      "position": "1B",
       "active": true
     },
     {
@@ -4543,7 +4550,7 @@
       "name": "Jared Serna",
       "mlbId": 691858,
       "team": "",
-      "position": "SS",
+      "position": "2B",
       "active": true
     },
     {
