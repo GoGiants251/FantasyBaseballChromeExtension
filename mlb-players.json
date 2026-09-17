@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-16",
+  "updatedAt": "2026-09-17",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5286,6 +5286,13 @@
       "mlbId": 640492,
       "team": "",
       "position": "RF",
+      "active": true
+    },
+    {
+      "name": "José Barrero",
+      "mlbId": 676480,
+      "team": "",
+      "position": "SS",
       "active": true
     },
     {
