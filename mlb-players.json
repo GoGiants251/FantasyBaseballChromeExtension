@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-18",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5520,10 +5520,17 @@
       "active": true
     },
     {
+      "name": "Josiah Gray",
+      "mlbId": 680686,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Josue De Paula",
       "mlbId": 800543,
       "team": "",
-      "position": "RF",
+      "position": "DH",
       "active": true
     },
     {
@@ -8225,7 +8232,7 @@
       "name": "Ronny Simon",
       "mlbId": 682927,
       "team": "",
-      "position": "2B",
+      "position": "RF",
       "active": true
     },
     {
