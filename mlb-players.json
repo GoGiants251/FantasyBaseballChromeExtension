@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-18",
+  "updatedAt": "2026-09-19",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -5380,6 +5380,13 @@
       "active": true
     },
     {
+      "name": "José Rodríguez",
+      "mlbId": 692064,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Jose Siri",
       "mlbId": 642350,
       "team": "",
@@ -5594,6 +5601,13 @@
       "mlbId": 665742,
       "team": "",
       "position": "LF",
+      "active": true
+    },
+    {
+      "name": "Julian Aguiar",
+      "mlbId": 687924,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -7083,6 +7097,13 @@
     {
       "name": "Michael Wacha",
       "mlbId": 608379,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Michel Otañez",
+      "mlbId": 671305,
       "team": "",
       "position": "P",
       "active": true
