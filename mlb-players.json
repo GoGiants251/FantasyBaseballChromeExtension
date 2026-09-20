@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-09-20",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -1775,6 +1775,13 @@
       "active": true
     },
     {
+      "name": "Carson Spiers",
+      "mlbId": 686730,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Carson Whisenhunt",
       "mlbId": 687931,
       "team": "",
@@ -3382,6 +3389,13 @@
       "mlbId": 678662,
       "team": "",
       "position": "SS",
+      "active": true
+    },
+    {
+      "name": "Félix Bautista",
+      "mlbId": 642585,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
@@ -7097,13 +7111,6 @@
     {
       "name": "Michael Wacha",
       "mlbId": 608379,
-      "team": "",
-      "position": "P",
-      "active": true
-    },
-    {
-      "name": "Michel Otañez",
-      "mlbId": 671305,
       "team": "",
       "position": "P",
       "active": true
