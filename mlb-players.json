@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-20",
+  "updatedAt": "2026-09-21",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -57,6 +57,13 @@
       "mlbId": 605400,
       "team": "",
       "position": "P",
+      "active": true
+    },
+    {
+      "name": "Aaron Sabato",
+      "mlbId": 693306,
+      "team": "",
+      "position": "1B",
       "active": true
     },
     {
@@ -2794,6 +2801,13 @@
       "mlbId": 693307,
       "team": "",
       "position": "C",
+      "active": true
+    },
+    {
+      "name": "DJ Herz",
+      "mlbId": 687792,
+      "team": "",
+      "position": "P",
       "active": true
     },
     {
