@@ -1,7 +1,7 @@
 {
   "source": "MLB Stats API",
   "season": 2026,
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "players": [
     {
       "name": "A.J. Ewing",
@@ -897,6 +897,13 @@
       "mlbId": 666182,
       "team": "",
       "position": "3B",
+      "active": true
+    },
+    {
+      "name": "Bo Davidson",
+      "mlbId": 815589,
+      "team": "",
+      "position": "LF",
       "active": true
     },
     {
@@ -4802,7 +4809,7 @@
       "name": "Jesús Sánchez",
       "mlbId": 660821,
       "team": "",
-      "position": "RF",
+      "position": "DH",
       "active": true
     },
     {
@@ -8145,6 +8152,13 @@
       "active": true
     },
     {
+      "name": "River Ryan",
+      "mlbId": 689981,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
       "name": "Rob Refsnyder",
       "mlbId": 608701,
       "team": "",
@@ -9114,7 +9128,7 @@
       "name": "Thomas Saggese",
       "mlbId": 695336,
       "team": "",
-      "position": "LF",
+      "position": "SS",
       "active": true
     },
     {
@@ -9225,6 +9239,13 @@
     {
       "name": "Tomoyuki Sugano",
       "mlbId": 608372,
+      "team": "",
+      "position": "P",
+      "active": true
+    },
+    {
+      "name": "Tony Gonsolin",
+      "mlbId": 664062,
       "team": "",
       "position": "P",
       "active": true
